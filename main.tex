@@ -1,0 +1,84 @@
+\documentclass[a4 paper, 11pt]{article}
+
+\usepackage[top = 1.in, bottom = 1.in, left=0.7in, right = 0.7in]{geometry}
+
+
+\usepackage{graphicx}
+\usepackage{wrapfig}
+%\begin{wrapfigure}{r}{2in}
+%\centering
+ %\includegraphics[width= 2.2in]{name of Image}
+  %\caption {}
+%\end{wrapfigure}
+
+\usepackage[ngerman]{babel}
+
+\usepackage[hang]{footmisc}
+\usepackage{multicol}
+\usepackage[font={small,it}]{caption}
+
+\usepackage{enumitem} 
+%Liste Punkte (\begin {itemize}, \item)
+
+%\usepackage{longtable} % Für Tabellen über 1 Seite
+%\begin{longtable}{}
+% \end{longtable}
+
+\usepackage {setspace} %Zeilenabstand
+%\begin{spacing}{Zahl}
+%\end{spacing}
+
+\usepackage{bm} %italic \bm{\mathit{•}}
+
+
+\usepackage{siunitx}
+
+\sisetup{locale = DE, per-mode = fraction, separate-uncertainty,   exponent-to-prefix, prefixes-as-symbols = false, scientific-notation=true
+}
+\newcommand{\ns}[4]{(\num[scientific-notation=false]{#1}\pm\num[scientific-notation=false]{#2})\cdot\num[]{e#3}\si{#4}}
+
+\begin{document}
+
+\begin{titlepage}
+
+\vspace*{1cm}
+	\centering
+	
+	{\scshape\Large Protokolle Praktikum Physik 3cg \par}
+	\vspace{0.5cm}
+	{\huge\bfseries Experimentelle Bestimmung der spezifische Schmelzwärme von Eis\par}
+	\vspace{0.5cm}
+	{\Large Noah Vogt \& Simon Hammer\par}
+	\vspace{0.5cm}
+
+	{\large Durchgeführt am 15. September 2020\par}
+	
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+
+\section{Versuchsziel}
+Ziel ist es die \textit{spezifische Schmelzwärme} $L_f$ von Eis mittels eines\textit{kalorimetrischen Experiments} so genau wie möglich zu bestimmen und mit dem Tabellenwert $ \num{3.338 e5}\si{\J\per\kg} $ zu vergleichen und die abbweichung vom Tabellenwert zu erklären.
+
+\section{Physikalischer Hintergrund}
+Die Schmelzwärme ist die menge an Energie die aufgebracht werden muss, um den Aggregatzustand eines Stoffes von fest zu flüssig oder umgekehrt zu ändern, ohne das sich die Temperatur, bei konstantem Druck, verändert. Sie ist abhängig von der Masse und dem Stoff an sich. Die zur Schmelzwärme gehörende konstante ist die \textit{spezifische Schmelzwärme}, welche sich auf die Masse bezieht und die Einheit $\si{\J\per\kg}$ hat. Nach diesem Model lautet nun die Formel für die Schmelzwärme 
+$$ Q_{schmelz}= m \cdot L_f$$
+Bei einem \textit{kalorimetrischen Experiment} wird von einem idealisierten abgeschlossenen Systeme ausgegangen. Es wird angenommen, dass die vom Wasser abgegebene Wärme der vom Eis aufgenommenen Wärme entspricht. Spricht:
+$$ Q_{Auf}=Q_{Ab}$$
+Das Eis wird zwei physikalisch wichtige Prozesse durchgehen. Wir nehem an dass das Eis anfangs $\SI{0}{\celsius}$ hat. Zuerst wird das Eis geschmolzen und dann erwärmt. Daraus folgt das die Schmelzwärme zur Wärmemenge addiert werden muss, um die menge an Wärme zu erlangen welche gebraucht wird um das Eis zu schmelzen und auf eine bestimmte Temperatur zu erwärmen. (Für die vereinfachung nene wir die Schmelzwärme $Q_{1}$ und die benötigte Wärme um das geschmolzene Eis zu erwärmen $Q_{2}$, die abgegebene Wärme des heissen Wasser nenen wir $Q_{3}$). Die Formel lautet somit
+$$ Q_{1} + Q_{2} = Q_{3} $$
+Die Formel für die Wärmemenge wird aus der Formelsammlung entnommen.
+$$ Q_{1} + Q_{2} = Q_{3} \Rightarrow m_{\rm{Eis}} \cdot L_f + m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \mathit{\Delta}\vartheta_1 = m_{\rm{H_2o}} \cdot c_{\rm{H_2o}} \cdot \mathit{\Delta}\vartheta_2$$
+
+
+\section{Versuchsaufbau}
+\section{Versuchsdurchführung}
+\section{Versuchsauswertung}
+\section{Kommentar / Diskussion}
+
+
+
+
+
+\end{document}
