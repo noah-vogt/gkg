@@ -2,6 +2,12 @@
 
 \usepackage[top = 1.in, bottom = 1.in, left=0.7in, right = 0.7in]{geometry}
 
+% fix figure positioning
+\usepackage{float}
+
+% tables
+\renewcommand{\arraystretch}{1.4}
+\usepackage{multirow}
 
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -74,6 +80,29 @@ $$ Q_{1} + Q_{2} = Q_{3} \Rightarrow m_{\rm{Eis}} \cdot L_f + m_{\rm{Eis}} \cdot
 
 \section{Versuchsaufbau}
 \section{Versuchsdurchführung}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Beschreibung} & \textbf{Abkürzung} & \textbf{Wert} \\
+        \hline
+        Wärmekapazität Wasser & $C_{H_{2}O}$ & 4182 $\frac{J}{kg\cdot{}K}$\\
+        \hline
+        Masse Kalorimeter leer & $m_{Kal}$ & $(613.0\pm 0.05)g$\\
+        Masse Kalorimeter mit Wasser 1 & $m_{1}$ & $(787.0\pm 0.05)g$\\
+        \hline
+        Masse Gemischt 1 & $m_{2}$ & $(796.9\pm 0.05)g$\\
+        Masse Kalorimeter mit Wasser 2 & $m_{3}$ & $(781.3\pm 0.05)g$\\
+    Masse Gemischt 2 & $m_{4}$ & $(795.8\pm 0.05)g$\\
+        \hline
+        Temperatur vor dem Eis 1 & $\vartheta_{T_{1}}$ & $(70.3\pm 0.05)^{\circ}C$\\
+        Temperatur geschmolzen 1 & $\vartheta_{T_{2}}$ & $(62.7\pm 0.05) ^{\circ}C$\\
+        \hline
+        Temperatur vor dem Eis 2 & $\vartheta_{T_{3}}$ & $(63.4\pm 0.05)^{\circ}C$\\
+        Temperatur geschmolzen 2 & $\vartheta_{T_{4}}$ & $(54.1\pm 0.05) ^{\circ}C$\\
+        \hline
+    \end{tabular}
+\end{table}
 \section{Versuchsauswertung}
 \section{Kommentar / Diskussion}
 
