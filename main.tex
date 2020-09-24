@@ -1,46 +1,63 @@
-\documentclass[a4 paper, 11pt]{article}
+% standard
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
 
-\usepackage[top = 1.in, bottom = 1.in, left=0.7in, right = 0.7in]{geometry}
+% geometry
+\usepackage{geometry}
+\geometry{ headsep=20pt,
+headheight=20pt,
+left=21mm,
+top=15mm,
+right=21mm,
+bottom=15mm,
+footskip=20pt,
+includeheadfoot}
+
+% header and footer
+\usepackage{datetime}
+\newdateformat{dmy}{%
+\THEDAY.~\monthname[\THEMONTH] \THEYEAR}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Noah Vogt \& Simon Hammer}
+\chead{}
+\rhead{18. August 2020}
+\lfoot{}
+\cfoot{Gymnasium Kirschgarten}
+\rfoot{Seite \thepage}
+\renewcommand{\footrulewidth}{.4pt}
 
 % fix figure positioning
 \usepackage{float}
 
-% tables
+% larger inner table margin
 \renewcommand{\arraystretch}{1.4}
-\usepackage{multirow}
 
-% indent
+% no paragraph indent
 \setlength{\parindent}{0em}
 
+% graphics package
 \usepackage{graphicx}
-\usepackage{wrapfig}
-%\begin{wrapfigure}{r}{2in}
-%\centering
- %\includegraphics[width= 2.2in]{name of Image}
-  %\caption {}
-%\end{wrapfigure}
-\usepackage{float}
-\usepackage[ngerman]{babel}
 
-\usepackage[hang]{footmisc}
 \usepackage{multicol}
-\usepackage[font={small,it}]{caption}
 
-\usepackage{enumitem} 
-%Liste Punkte (\begin {itemize}, \item)
-
-%\usepackage{longtable} % Für Tabellen über 1 Seite
-%\begin{longtable}{}
-% \end{longtable}
+% use sans serif font
+\usepackage{tgheros}
+\usepackage{mathptmx}
+\renewcommand{\familydefault}{\sfdefault}
 
 \usepackage {setspace} %Zeilenabstand
 %\begin{spacing}{Zahl}
 %\end{spacing}
 
+% don't even ask what this is for, I have no idea (noah)
 \usepackage{bm} %italic \bm{\mathit{•}}
-
-
+\usepackage[hang]{footmisc}
 \usepackage{siunitx}
+\usepackage[font={small,it}]{caption}
+
+
 
 \sisetup{locale = DE, per-mode = fraction, separate-uncertainty,   exponent-to-prefix, prefixes-as-symbols = false, scientific-notation=false
 }
@@ -80,7 +97,7 @@ $$ Q_{Auf}=Q_{Ab}$$
 Das Eis wird zwei physikalisch wichtige Prozesse durchgehen. Wir nehem an dass das Eis anfangs $\SI{0}{\celsius}$ hat. Zuerst wird das Eis geschmolzen und dann erwärmt. Daraus folgt das die Schmelzwärme zur Wärmemenge addiert werden muss, um die menge an Wärme zu erlangen welche gebraucht wird um das Eis zu schmelzen und auf eine bestimmte Temperatur zu erwärmen. (Für die vereinfachung nene wir die Schmelzwärme $Q_{1}$ und die benötigte Wärme um das geschmolzene Eis zu erwärmen $Q_{2}$, die abgegebene Wärme des heissen Wasser nenen wir $Q_{3}$). Die Formel lautet somit
 $$ Q_{1} + Q_{2} = Q_{3} $$
 Die Formel für die Wärmemenge wird aus der Formelsammlung entnommen.
-$$ Q_{1} + Q_{2} = Q_{3} \Rightarrow m_{\rm{Eis}} \cdot L_f + m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \mathit{\Delta}\vartheta_1 = m_{\rm{H_2o}} \cdot c_{\rm{H_2o}} \cdot \mathit{\Delta}\vartheta_2$$ $$ \Rightarrow L_f = \frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \mathit{\Delta}\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \mathit{\Delta}\vartheta_1}{m_{\rm{Eis}}}$$
+$$ Q_{1} + Q_{2} = Q_{3} \Rightarrow m_{\rm{Eis}} \cdot L_f + m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1 = m_{\rm{H_2o}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2$$ $$ \Rightarrow L_f = \frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1}{m_{\rm{Eis}}}$$
 
 
 
@@ -119,7 +136,7 @@ Als erstes wird die Masse des Kalorimeters $m_{\rm{Kal}} $ gemessen  und bis zur
 
 \subsection{Durchführung 1}
 
-$L_{f_1}= \displaystyle{\frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \mathit{\Delta}\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \mathit{\Delta}\vartheta_1}{m_{\rm{Eis}}}}$\\\\
+$L_{f_1}= \displaystyle{\frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1}{m_{\rm{Eis}}}}$\\\\
 
 $L_{f_1}=\displaystyle{\frac{\left(\left(m_1-m_{Kal}\right) \cdot 4182\frac{J}{Kg \cdot K}\cdot \Delta \vartheta_{T_1}\right)-\left(\left(m_2-m_{Kal}\right)\cdot 4182 \frac{J}{Kg \cdot K} \cdot \vartheta_{T_2}\right)}{m_2-m_{Kal}}} $\\\\
 
