@@ -47,23 +47,17 @@ includeheadfoot}
 \usepackage{mathptmx}
 \renewcommand{\familydefault}{\sfdefault}
 
-\usepackage {setspace} %Zeilenabstand
-%\begin{spacing}{Zahl}
-%\end{spacing}
-
 % don't even ask what this is for, I have no idea (noah)
 \usepackage{bm} %italic \bm{\mathit{•}}
 \usepackage[hang]{footmisc}
 \usepackage{siunitx}
 \usepackage[font={small,it}]{caption}
-
-
-
 \sisetup{locale = DE, per-mode = fraction, separate-uncertainty,   exponent-to-prefix, prefixes-as-symbols = false, scientific-notation=false
 }
 \newcommand{\ns}[4]{(\num[scientific-notation=false]{#1}\pm\num[scientific-notation=false]{#2})\cdot\num[]{e#3}\si{#4}}
-% tables
-\usepackage{multirow}
+
+% show isbn in bibliography
+\usepackage{natbib}
 
 \begin{document}
 
@@ -87,7 +81,7 @@ includeheadfoot}
 \pagebreak
 
 \section{Versuchsziel}
-Ziel ist es die \textit{spezifische Schmelzwärme} $L_f$ von Eis mittels eines \textit{kalorimetrischen Experiments} so genau wie möglich zu bestimmen, mit dem Tabellenwert $ \num{3.338 e5}\si{\J\per\kg} $ zu vergleichen und die Abweichung vom Tabellenwert zu erklären. Vorausschtlich wird der Messwert unter dem Tabellenwert liegen aufgrund systematischer Fehler.
+Ziel ist es die \textit{spezifische Schmelzwärme} $L_f$ von Eis mittels eines \textit{kalorimetrischen Experiments} so genau wie möglich zu bestimmen, mit dem Tabellenwert $\num{3.338 e5}\si{\J\per\kg}$ \cite{formelsammlung} zu vergleichen und die Abweichung vom Tabellenwert zu erklären. Vorausschtlich wird der Messwert unter dem Tabellenwert liegen aufgrund systematischer Fehler.
 
 \section{Physikalischer Hintergrund}
 Die Schmelzwärme ist die Menge an Energie die aufgebracht werden muss, um den Aggregatzustand eines Stoffes von fest zu flüssig oder umgekehrt zu ändern, ohne das sich die Temperatur, bei konstantem Druck, verändert. Sie ist abhängig von der Masse und dem Stoff an sich. Die zur Schmelzwärme gehörende Konstante ist die \textit{spezifische Schmelzwärme}, welche sich auf die Masse bezieht und die Einheit $\si{\J\per\kg}$ hat. Nach diesem Modell lautet nun die Formel für die Schmelzwärme.
@@ -164,7 +158,7 @@ $\Rightarrow L_{f_2}=\displaystyle{\frac{L_{2_{max}}+L_{2_{min}}}{2}=\left(20935
 \subsection{Genauigkeit}
 Bei den beiden Versuchsdurchgängen wurden beim ersten Mal eine Abweichung von \textit{13\%} und beim zweiten Mal \textit{37\%} festgestellt.\\
 
-Aufgrund der vielen systematischen Fehler, da nicht in einem abgschlossenen System experimentiert werden konnte, kann die Ungenauigkeit der Messresultate erklärt werden. Der Tabellenwert $ \num{3.338 e5}\si{\J\per\kg} $ wurde wie erwartet unterschritten, da einige Energie aus unserem System an die Umgebung verloren ging.\\
+Aufgrund der vielen systematischen Fehler, da nicht in einem abgschlossenen System experimentiert werden konnte, kann die Ungenauigkeit der Messresultate erklärt werden. Der Tabellenwert $\num{3.338 e5}\si{\J\per\kg}$ \cite{formelsammlung} wurde wie erwartet unterschritten, da einige Energie aus unserem System an die Umgebung verloren ging.\\
 
 Es ist noch anzumerken, dass bei der Berechnung keine Fehlerschranke bei der Masse gemacht wurde. Dies ist zu begründen, dass diese Ungenauigkeit im Vergleich zur Temperaturmessung vernachlässigbar ist.
 
@@ -175,5 +169,8 @@ Ein systematisch Fehler bestand darin, dass das Kalorimeter nicht zu 100\% isoli
 Ein weiterer Fehler bestand darin, dass das Eis nicht vollständig mit dem Papier abgetrocknet werden konnte.\\
 
 Beim der zweiten Versuchsdurchführung ist ein kleiner Fehler unterlaufen: Das Eis ist auf den Tisch gefallen und wurde dann mit dem Händen in das Kalorimeter befördert. Dabei ist ein Teil des Eises geschmolzen, weil Wärmeenergie von den Händen an das Eis abgegeben wurde. Somit ist die höhere Abweichung vom Tabellenwert im Vergleich zum ersten Versuchsdurchlauf begründet.
+
+\bibliographystyle{plainnat}
+\bibliography{local.bib}
 
 \end{document}
