@@ -1,0 +1,165 @@
+% standard
+\documentclass[a4paper,12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+
+% geometry
+\usepackage{geometry}
+\geometry{ headsep=20pt,
+headheight=20pt,
+left=21mm,
+top=15mm,
+right=21mm,
+bottom=15mm,
+footskip=20pt,
+includeheadfoot}
+
+% header and footer
+\usepackage{datetime}
+\newdateformat{dmy}{%
+\THEDAY.~\monthname[\THEMONTH] \THEYEAR}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{Noah Vogt \& Simon Hammer}
+\chead{}
+\rhead{18. August 2020}
+\lfoot{}
+\cfoot{Gymnasium Kirschgarten}
+\rfoot{Seite \thepage}
+\renewcommand{\footrulewidth}{.4pt}
+
+% fix figure positioning
+\usepackage{float}
+
+% larger inner table margin
+\renewcommand{\arraystretch}{1.4}
+
+% no paragraph indent
+\setlength{\parindent}{0em}
+
+% graphics package
+\usepackage{graphicx}
+
+\usepackage{multicol}
+
+% use sans serif font
+\usepackage{tgheros}
+\usepackage{mathptmx}
+\renewcommand{\familydefault}{\sfdefault}
+
+\usepackage {setspace} %Zeilenabstand
+%\begin{spacing}{Zahl}
+%\end{spacing}
+
+% don't even ask what this is for, I have no idea (noah)
+\usepackage{bm} %italic \bm{\mathit{•}}
+\usepackage[hang]{footmisc}
+\usepackage{siunitx}
+\usepackage[font={small,it}]{caption}
+
+
+
+\sisetup{locale = DE, per-mode = fraction, separate-uncertainty,   exponent-to-prefix, prefixes-as-symbols = false, scientific-notation=false
+}
+\newcommand{\ns}[4]{(\num[scientific-notation=false]{#1}\pm\num[scientific-notation=false]{#2})\cdot\num[]{e#3}\si{#4}}
+% tables
+\usepackage{multirow}
+
+\begin{document}
+
+\begin{titlepage}
+
+\vspace*{1cm}
+	\centering
+	
+	{\scshape\Large Protokolle Praktikum Physik 3cg \par}
+	\vspace{0.5cm}
+	{\huge\bfseries Experimentelle Bestimmung der spezifische Schmelzwärme von Eis\par}
+	\vspace{0.5cm}
+	{\Large Noah Vogt \& Simon Hammer\par}
+	\vspace{0.5cm}
+
+	{\large Durchgeführt am 15. September 2020\par}
+	
+\end{titlepage}
+
+\tableofcontents
+\pagebreak
+
+\section{Versuchsziel}
+Ziel ist es die \textit{spezifische Schmelzwärme} $L_f$ von Eis mittels eines \textit{kalorimetrischen Experiments} so genau wie möglich zu bestimmen und mit dem Tabellenwert $ \num{3.338 e5}\si{\J\per\kg} $ zu vergleichen und die abbweichung vom Tabellenwert zu erklären.
+
+\section{Physikalischer Hintergrund}
+Die Schmelzwärme ist die menge an Energie die aufgebracht werden muss, um den Aggregatzustand eines Stoffes von fest zu flüssig oder umgekehrt zu ändern, ohne das sich die Temperatur, bei konstantem Druck, verändert. Sie ist abhängig von der Masse und dem Stoff an sich. Die zur Schmelzwärme gehörende konstante ist die \textit{spezifische Schmelzwärme}, welche sich auf die Masse bezieht und die Einheit $\si{\J\per\kg}$ hat. Nach diesem Model lautet nun die Formel für die Schmelzwärme 
+$$ Q_{schmelz}= m \cdot L_f$$
+Bei einem \textit{kalorimetrischen Experiment} wird von einem idealisierten abgeschlossenen System ausgegangen. Es wird angenommen, dass die vom Wasser abgegebene Wärme der vom Eis aufgenommenen Wärme entspricht. Spricht:
+$$ Q_{Auf}=Q_{Ab}$$
+Das Eis wird zwei physikalisch wichtige Prozesse durchgehen. Wir nehem an dass das Eis anfangs $\SI{0}{\celsius}$ hat. Zuerst wird das Eis geschmolzen und dann erwärmt. Daraus folgt das die Schmelzwärme zur Wärmemenge addiert werden muss, um die menge an Wärme zu erlangen, welche gebraucht wird um das Eis zu schmelzen und auf eine bestimmte Temperatur zu erwärmen. (Für die vereinfachung nenen wir die Schmelzwärme $Q_{1}$ und die benötigte Wärme um das geschmolzene Eis zu erwärmen $Q_{2}$, die abgegebene Wärme des heissen Wasser nenen wir $Q_{3}$). Die Formel lautet somit
+$$ Q_{1} + Q_{2} = Q_{3} $$
+Die Formel für die Wärmemenge wird aus der Formelsammlung entnommen.
+$$ Q_{1} + Q_{2} = Q_{3} \Rightarrow m_{\rm{Eis}} \cdot L_f + m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1 = m_{\rm{H_2o}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2$$ $$ \Rightarrow L_f = \frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1}{m_{\rm{Eis}}}$$
+
+
+
+\section{Versuchsaufbau}
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=.5\linewidth]{image}
+\end{figure}
+
+\section{Versuchsdurchführung}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|c|}
+        \hline
+        \textbf{Beschreibung} & \textbf{Abkürzung} & \textbf{Wert} \\
+        \hline
+        Wärmekapazität Wasser & $C_{H_{2}O}$ & 4182 $\frac{J}{kg\cdot{}K}$\\
+        \hline
+        Masse Kalorimeter leer & $m_{Kal}$ & $(613.0\pm 0.05)g$\\
+        Masse Kalorimeter mit Wasser 1 & $m_{1}$ & $(787.0\pm 0.05)g$\\
+        \hline
+        Masse Gemischt 1 & $m_{2}$ & $(796.9\pm 0.05)g$\\
+        Masse Kalorimeter mit Wasser 2 & $m_{3}$ & $(781.3\pm 0.05)g$\\
+    Masse Gemischt 2 & $m_{4}$ & $(795.8\pm 0.05)g$\\
+        \hline
+        Temperatur vor dem Eis 1 & $\vartheta_{T_{1}}$ & $(70.3\pm 0.05)^{\circ}C$\\
+        Temperatur geschmolzen 1 & $\vartheta_{T_{2}}$ & $(62.7\pm 0.05) ^{\circ}C$\\
+        \hline
+        Temperatur vor dem Eis 2 & $\vartheta_{T_{3}}$ & $(63.4\pm 0.05)^{\circ}C$\\
+        Temperatur geschmolzen 2 & $\vartheta_{T_{4}}$ & $(54.1\pm 0.05) ^{\circ}C$\\
+        \hline
+    \end{tabular}
+\end{table}
+Als erstes wird die Masse des Kalorimeters $m_{\rm{Kal}} $ gemessen  und bis zur hälfte etwa mit Wasser gefühlt. Die Masse des Kalorimeters mit dem Wasser $m_{\rm{1/3}} $ wird nun nochmal gemessen. Das sich im Kalorimeter befindende Wasser wird nun, mit dem Tauchsieder, auf etwa   $\SI{70}{\celsius} $ erwärmt. Das Eis wird abgetrocknet und die Teperatur des heissen Wassers $\vartheta_{T_{1/3}} $ bis kurz vor dem hinzugeben des Eises abgelesen. Die Temperatur des Wassers wird dann nochmald abgelesen, wenn das Eis sich komplet aufgelöst hat. Die Masse des Kalorimeters mit dem Wasser $m_{\rm{2/4}} $ wird nun nochmal gemessen, um die genaue Masse des Eises zu bestimmen. Die Durchführung wird nochmal mit neuem Wasser und Eis gemacht. 
+\section{Versuchsauswertung}
+
+$L_{f}= \displaystyle{\frac{m_{\rm{H2O}} \cdot c_{\rm{H_2o}} \cdot \Delta\vartheta_2 - m_{\rm{Eis}} \cdot c_{\rm{H_2O}} \cdot \Delta\vartheta_1}{m_{\rm{Eis}}}}$
+
+\subsection{Durchführung 1}
+
+$L_{f_1}=\displaystyle{\frac{\left(\left(m_1-m_{Kal}\right) \cdot 4182\frac{J}{kg \cdot K}\cdot \left(\vartheta_{T_1}-\vartheta_{T_2}\right)\right)-\left(\left(m_2-m_{1}\right)\cdot 4182 \frac{J}{kg \cdot K} \cdot \vartheta_{T_2}\right)}{m_2-m_{Kal}}} $\\\\
+
+$L_{f_{1_{max}}} =\displaystyle{\frac{\left(0.174\;kg \cdot 4182\frac{J}{kg \cdot K}\cdot 7.70^{\circ}C \right)-\left(0.010\;kg\cdot 4182 \frac{J}{kg \cdot K} \cdot 62.65^{\circ}C\right)}{0.010\;kg}} = 298302\frac{J}{kg}$\\\\
+
+$L_{f_{1_{min}}} =\displaystyle{\frac{\left(0.174\;kg \cdot 4182\frac{J}{kg \cdot K}\cdot 7.50^{\circ}C \right)-\left(0.010\;kg\cdot 4182 \frac{J}{kg \cdot K} \cdot 62.75^{\circ}C\right)}{0.010\;kg}} = 283331\frac{J}{kg}$\\\\
+
+$L_{f_1}=\displaystyle{\frac{L_{1_{max}}+L_{1_{min}}}{2}=\left(290816\pm 7486\right) \cdot \frac{J}{kg}=\left(2.9\pm 0.075\right)\cdot 10^{5} \frac{J}{kg}}$
+
+\subsection{Durchführung 2}
+
+$L_{f_2}=\displaystyle{\frac{\left(\left(m_3-m_{Kal}\right) \cdot 4182\frac{J}{kg \cdot K}\cdot \left(\vartheta_{T_3}-\vartheta_{T_4}\right)\right)-\left(\left(m_4-m_{3}\right)\cdot 4182 \frac{J}{kg \cdot K} \cdot \vartheta_{T_3}\right)}{m_4-m_{Kal}}} $\\\\
+
+$L_{f_{2_{max}}} =\displaystyle{\frac{\left(0.168\;kg \cdot 4182\frac{J}{kg \cdot K}\cdot 9.40^{\circ}C \right)-\left(0.015\;kg\cdot 4182 \frac{J}{kg \cdot K} \cdot 54.05^{\circ}C\right)}{0.184\;kg}} = 214244\frac{J}{kg}$\\\\
+
+$L_{f_{2_{min}}} =\displaystyle{\frac{\left(0.168\;kg \cdot 4182\frac{J}{kg \cdot K}\cdot 9.20^{\circ}C \right)-\left(0.015\;kg\cdot 4182 \frac{J}{kg \cdot K} \cdot 54.15^{\circ}C\right)}{0.184\;kg}} = 204458\frac{J}{kg}$\\\\
+
+$L_{f_2}=\displaystyle{\frac{L_{2_{max}}+L_{2_{min}}}{2}=\left(209351\pm 4893\right) \cdot \frac{J}{kg}=\left(2.1\pm 0.049\right)\cdot 10^{5} \frac{J}{kg}}$
+
+\section{Kommentar / Diskussion}
+
+Masse fehlerrechnung wurde vernachlässigt
+
+
+
+\end{document}
