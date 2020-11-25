@@ -96,11 +96,11 @@ NEUE ERKLÄRUNG DER FORMELN HIER
 
 $$\frac{Q_1}{C_u} = \frac{Q_2}{C_b} = u'\quad \Rightarrow \quad Q_2 = u' \cdot C_b$$
 
-$$Q_{Total} = C_b \cdot u_1$$
+$$Q_{Total} = C_b \cdot u$$
 
 $$Q_{Total} = Q_1+Q_2 \quad \Rightarrow \quad Q_1=Q_{Total}-Q_2$$
 
-$$C_u = \frac{Q_1}{u'} = \frac{Q_{Total}-Q_2}{u'} = \frac{C_b \cdot u_1 - u' \cdot C_b}{u'}$$
+$$C_u = \frac{Q_1}{u'} = \frac{Q_{Total}-Q_2}{u'} = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
 
 \section{Versuchsaufbau}
 \begin{figure}[H]
@@ -116,15 +116,15 @@ INSERT IMAGE HERE
         \hline
         \textbf{Beschreibung} & \textbf{Abkürzung} & \textbf{Wert} \\
         \hline
-        Kapazität bekannter Kondensator & $C_{B}$ & $(4.38\pm 0.005 )\mu F$\\
+        Kapazität bekannter Kondensator & $C_{b}$ & $(4.38\pm 0.005 )\mu F$\\
         \hline
         Spannung bekannter Kondensator 1 & $u_{1}$ & $(260\pm 2.5)V$\\
         Spannung bekannter Kondensator 2 & $u_{2}$ & $(300\pm 2.5)V$\\
         Spannung bekannter Kondensator 3 & $u_{3}$ & $(280\pm 2.5)V$\\
         \hline
-        Spannung nach dem Ausgleich 1 & $u_{1}$ & $(178\pm 2.5)V$\\
-        Spannung nach dem Ausgleich 2 & $u_{2}$ & $(201\pm 2.5)V$\\
-        Spannung nach dem Ausgleich 3 & $u_{3}$ & $(192\pm 2.5)V$\\
+        Spannung nach dem Ausgleich 1 & $u_{1}'$ & $(178\pm 2.5)V$\\
+        Spannung nach dem Ausgleich 2 & $u_{2}'$ & $(201\pm 2.5)V$\\
+        Spannung nach dem Ausgleich 3 & $u_{3}'$ & $(192\pm 2.5)V$\\
         \hline
     \end{tabular}
 \end{table}
@@ -134,19 +134,31 @@ INSERT DESCRIPTION HERE\\
 Die im letzten Paragraphen genannten Schritte werden mit anderer Ausgangspannung wiederholt durchgeführt.
 \section{Versuchsauswertung}
 
-
+$$C_u = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
 
 \subsection{Durchführung 1}
 
+$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{1_{max}}-u_{1_{min}}'\cdot C_{b_{min}}}{u_{1_{min}}'}}$\\\\
 
+$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{1_{min}}-u_{1_{max}}'\cdot C_{b_{max}}}{u_{1_{max}}'}}$\\\\
+
+$\Rightarrow C_{u_1}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}}$
 
 \subsection{Durchführung 2}
 
+$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{2_{max}}-u_{2_{min}}'\cdot C_{b_{min}}}{u_{2_{min}}'}}$\\\\
 
+$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{2_{min}}-u_{2_{max}}'\cdot C_{b_{max}}}{u_{2_{max}}'}}$\\\\
+
+$\Rightarrow C_{u_2}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}}$
 
 \subsection{Durchführung 2}
 
+$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{3_{max}}-u_{3_{min}}'\cdot C_{b_{min}}}{u_{3_{min}}'}}$\\\\
 
+$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{3_{min}}-u_{3_{max}}'\cdot C_{b_{max}}}{u_{3_{max}}'}}$\\\\
+
+$\Rightarrow C_{u_3}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}}$
 
 \section{Kommentar / Diskussion}
 
