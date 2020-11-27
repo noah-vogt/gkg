@@ -80,29 +80,23 @@ includeheadfoot}
 \pagebreak
 
 \section{Versuchsziel}
-Ziel ist es die \textit{Kapazität} $C_u$ eines Kondensators mittels eines \textit{Experiments} so genau wie möglich zu bestimmen, indem ein Kondensator, mit bekannter Kapazität, mit einer bestimmten Spannung, aufgeladen wird. Durch ein Zusammenschliessen der beiden Kondensatoren wird der zweite auch aufgeladen, sodass beide Kondensatoren die gleiche Spannung haben (\textit{Spannungsausgleich}). Nun kann mithilfe einiger Formeln die gesuchte Kapazität des unbekannten Kondensators besimmt werden. Vorausschtlich wird der Messwert unter dem realen Wert liegen aufgrund systematischer Fehler.
+Ziel ist es die \textit{Kapazität} $C_u$ eines Kondensators mittels eines \textit{Experiments} so genau wie möglich zu bestimmen, indem ein Kondensator, mit bekannter Kapazität, mit einer bestimmten Spannung, aufgeladen wird. Durch eine Parallelschaltung der beiden Kondensatoren wird der unbekannte Kondensator somit auch aufgeladen, sodass dann beide Kondensatoren die gleiche Spannung haben (es kommt zu einem \textit{Spannungsausgleich}).\\
+
+Nun kann mithilfe einiger Formeln die gesuchte Kapazität des unbekannten Kondensators bestimmt werden. Vorausschtlich wird der Messwert den realen Wert aufgrund systematischer Fehler aber ein wenig verfehlen.
 
 \section{Physikalischer Hintergrund}
 
-Die Fähigkeit Ladung zu Speichern macht einen Kondesator aus. Die Menge an Ladungsträgern, welche ein Kondensator unter einer gewissen Spannung aufnehmen kann, nennt sich Kapazität. Die Einheit der Kapazität nennt sich Farad und wird $[C] = 1 $F geschrieben. \\
+Die Fähigkeit Ladung zu Speichern macht einen Kondesator aus. Die Menge an Ladungsträgern, welche ein Kondensator unter einer gewissen Spannung aufnehmen kann, nennt sich Kapazität. Die Einheit der Kapazität nennt sich Farad und wird $[C] = 1 $F geschrieben.\\
 
-Die gespeicherte Ladung ist proportional zu der Spannung $Q \mathtt{\sim} U$ , weil es immer schwerer wird, mehr Ladung auf einen Träger zu speichern, desshalb muss die Spannugsquelle mehr Arbeit verrichten. Mit einer geeignete \textit{konstante C} wird nun die Formel vollendet.
-
+Die gespeicherte Ladung ist proportional zu der Spannung $Q \mathtt{\sim} U$ , weil es immer schwerer wird, mehr Ladung auf einen Träger zu speichern, weshalb die Spannugsquelle mehr Arbeit verrichten muss. Mit einer geeigneten \textit{Konstante C} wird nun die Formel vervollständigt.
 $$Q=C\cdot U$$
-
-
-Der \textit{Kondensator 2} wird aufgeladen und mit einem anderen nicht geladenen Kondensator (Kondensator 1) Parallelgeschalten. 
+Der \textit{Kondensator 2} wird aufgeladen und mit einem anderen nicht geladenen Kondensator (Kondensator 1) parallelgeschalten. 
 Nach dem Parallelschalten der beiden Kondensatoren kommt es zu einem Spannungsausgleich. Wobei eine neue konstante Spannung $u'$ der beiden Kondensatoren entsteht. Durch Umformen der obigen Gleichung ergibt sich
-
 $$\frac{Q_1}{C_u} = \frac{Q_2}{C_b} = u'\quad \Rightarrow \quad Q_2 = u' \cdot C_b \quad , \quad C_u = \frac{Q_1}{u'} $$
-
-Die Totale Ladung berechnet sich aus der Kapazität des zuerst aufgeladenen Kondensators (\textit{Kondensator 2}) und der   Spannung vor dem Parallelschalten, weil nach dem aufladen jenes Kondensators kein neuer Strom dem System hinzugefügt wird und  idealisiert nicht mit einem Stromverbrauch gerechnet wird. Ebenso ergibt sich die Totale Ladung des Systems aus der Ladungen der einzelnen Kondensatoren nach dem parallelschalten. Somit folgt:
-
+Die Totale Ladung berechnet sich aus der Kapazität des zuerst aufgeladenen \textit{Kondensators 2} und der Spannung vor dem Parallelschalten, weil nach dem Aufladen jenes Kondensators kein neuer Strom (resp. Energie) dem System hinzugefügt wird und es idealisiert ui keinem Stromverbrauch kommt. Ebenso ergibt sich die totale Ladung des Systems aus der Ladungen der einzelnen Kondensatoren nach dem Parallelschalten. Somit folgt:
 $$Q_{Total} = C_b \cdot u$$
-
-$$Q_{Total} = Q_1+Q_2 \quad \Rightarrow \quad Q_1=Q_{Total}-Q_2$$
-
-Durch umformen und einsetzen ergibt sich dann:
+$$Q_{Total} = Q_1+Q_2 \quad \Rightarrow \quad Q_1=Q_{Total}-Q_2$$\\
+Durch Umformen und Einsetzen ergibt sich dann:\\
 
 $$C_u = \frac{Q_1}{u'} = \frac{Q_{Total}-Q_2}{u'} = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
 
@@ -134,9 +128,8 @@ $$C_u = \frac{Q_1}{u'} = \frac{Q_{Total}-Q_2}{u'} = \frac{C_b \cdot u - u' \cdot
     \end{tabular}
 \end{table}
 
-Als erstes wird die Kapazität vom \textit{Kondensator 2} abgelesen und an das Netzgerät mit den Kabeln angeschlossen. Das \textit{statische Voltmeter} wird an den \textit{Kondensator 2} angeschlossen und das Netzgerät wird angeschaltet. Der \textit{Kondensator 2} wird mit einer gewissen Menge Volt geladen, welche beim \textit{Voltmeter} ablesen wird. Die Kabel werden von dem Netzgerät entfernt und direkt, ohne eine berührung mit etwas anderem, in den \textit{Kondensator 1} gesteckt. Die Spannung nimmt ab und wird nochmals gemessen, wenn sie Stabil ist. Nun werden die Kondensatoren einzeln mit der Glühbirne Parallelgeschalten und entladen. Der ganze Vorgang wird dreimal wiederholt mit unterschidlicher ausgangs Spannung. 
+Als erstes wird die Kapazität vom \textit{Kondensator 2} abgelesen und an das Netzgerät mit den Kabeln angeschlossen. Das \textit{statische Voltmeter} wird an den \textit{Kondensator 2} angeschlossen und das Netzgerät wird angeschaltet. Der \textit{Kondensator 2} wird mit einer gewissen Menge Volt geladen, welche vom \textit{Voltmeter} ablesen wird. Die Kabel werden von dem Netzgerät entfernt - ohne eine Berührung mit etwas anderem - in den \textit{Kondensator 1} gesteckt. Die Spannung wird nach dieser Parallelschaltung der beiden Kondensatoren nochmals gemessen, wenn diese stabil ist. Nun werden die Kondensatoren einzeln mit der Glühbirne Parallelgeschalten und dadurch entladen. Der ganze Vorgang wird schliesslich dreimal wiederholt mit unterschiedlicher Ausgangsspannung. 
 
-\newpage
 \section{Versuchsauswertung}
 
 $$C_u = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
@@ -151,44 +144,43 @@ $C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{1_{min}}-u_{1_{max}}'\cdo
 
 $C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 257.5\;V-180.5\;V\cdot 4.385\cdot 10^{-6}\;F}{180.5\;V}} = 1.856\cdot 10^{-6}\;F$\\\\
 
-$\Rightarrow C_{u_1}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2.02005 (\pm 0.1637)\cdot \mu F$
+$\Rightarrow C_{u_1}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2020052 (\pm 163709)\cdot F = 2.02 (\pm 0.16)\; \mu F$
 
 \subsection{Durchführung 2}
 
 $C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{2_{max}}-u_{2_{min}}'\cdot C_{b_{min}}}{u_{2_{min}}'}}$\\\\
 
-$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 302.5\;V-198.5\;V\cdot 4.375\cdot 10^{-6}\;F}{195.5\;V}}$\\\\
+$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 302.5\;V-198.5\;V\cdot 4.375\cdot 10^{-6}\;F}{195.5\;V}} = 2.343\cdot 10^{-6}\;F$\\\\
 
 $C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{2_{min}}-u_{2_{max}}'\cdot C_{b_{max}}}{u_{2_{max}}'}}$\\\\
 
-$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 297.5\;V-203.5\;V\cdot 4.385\cdot 10^{-6}\;F}{203.5\;V}}$\\\\
+$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 297.5\;V-203.5\;V\cdot 4.385\cdot 10^{-6}\;F}{203.5\;V}} = 2.011\cdot 10^{-6}\; F$\\\\
 
-$\Rightarrow C_{u_2}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}}$
-\newpage
+$\Rightarrow C_{u_2}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2176861 (\pm 165977)\cdot F = 2.18 (\pm 0.17)\; \mu F$
 
 \subsection{Durchführung 3}
 
 $C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{3_{max}}-u_{3_{min}}'\cdot C_{b_{min}}}{u_{3_{min}}'}}$\\\\
 
-$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 282.5\;V-189.5\;V\cdot 4.375\cdot 10^{-6}\;F}{189.5\;V}}$\\\\
+$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 282.5\;V-189.5\;V\cdot 4.375\cdot 10^{-6}\;F}{189.5\;V}} = 2.162\cdot 10^{-6}\; F$\\\\
 
 $C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{3_{min}}-u_{3_{max}}'\cdot C_{b_{max}}}{u_{3_{max}}'}}$\\\\
 
-$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 277.5\;V-194.5\;V\cdot 4.385\cdot 10^{-6}\;F}{194.5\;V}}$\\\\
+$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 277.5\;V-194.5\;V\cdot 4.385\cdot 10^{-6}\;F}{194.5\;V}} = 1.857\cdot 10^{-6}\; F$\\\\
 
-$\Rightarrow C_{u_3}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}}$
+$\Rightarrow C_{u_3}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2009486 (\pm 152519)\cdot F = 2.01 (\pm 0.15)\;\mu F$
 
 \section{Kommentar / Diskussion}
 
 \subsection{Genauigkeit}
 
-Da die Kapazität des \textit{Kondensators 1} nicht bekannt, ist kann keine genaue Aussage über die Genauigkeit des Experiments getroffen werden. Es wird aber immernoch ein unterschreiten des Tabellenwertes angenommen, weil die Fehlerquellen auf ein solches verhalten hinweisen. Ebenso  wird von einer richtigen Rechnung ausgegangen. \\
+Da die Kapazität des \textit{Kondensators 1} nicht bekannt ist, kann keine genaue Aussage über die Genauigkeit des Experiments getroffen werden. Es wird aber immernoch eine Abweichung vom realen Wert angenommen, weil dieses Experiment gewisse Fehlerquellen aufweist (dazu später mehr). Ebenso wird von einer richtigen Berechnung ausgegangen.\\
 
 
 
 %-Voltmeter recht ungenau, verbraucht vllt. sogar noch strom
 
--fehlerschranken
+Bei der Durchführung eins und drei ist eine sehr geringe Abweichung der Endresultate zu verzeichen. Zu dem Wert von Durchführung zwei ist aber auch nur eine kleine Abweichung zu verzeichenen. Es wird somit angenommen, dass bei \textit{keinem} der drei Durchgängen ein grosser Fehler unterlaufen ist. Aber leider lässt sich durch keine Beobachtung erklären, weshalb es zu dieser Abweichung beim Endresultat der zweiten Durchführung kam.
 
 %-energie geht verloren ein wenig bei der der parallelschaltung (keine 100\% ige effizienz)
 
@@ -202,10 +194,11 @@ Da die Kapazität des \textit{Kondensators 1} nicht bekannt, ist kann keine gena
 
 \subsection{Fehlerquellen}
 
-Ein Messfehler bestand darin, dass der Voltmeter sehr ungenau misst und warscheinlich auch noch ein wenig Strom verbraucht. Es wird auch angenommen, dass die Kondensatoren nicht 100\% der Ladung gespeichert halten können. Nur ist die Zeit, in welcher die Kondensatoren Enegrie abgeben könne, sehr kurz, deshalb wird von einer sehr kleinen verfälschung des Ergebnissses gerechnet.\\\\
-Es geht Energie verlohren sobald die Kabel vom Netzgerät in den \textit{Kondensator 1} gesteckt werden, da es meisst blitzt und Licht auch Energie ist, die frei wird. Dafon kann abgeleitet werden, dass dort Strom verlohren geht. Wie grravierend die veränderung ist nicht klar.   \\\\
-Es gibt auch noch weitere Fehlerquelle von welchen aber ausgegangen wird das sie nicht einen grossen einfluss auf das Ergebniss haben. 
-Einer dieser Fehlerquellen ist das ein Kabel warscheinlich nichtt zu 100\% isoliert. \\
+Ein Fehler besteht darin, dass das Voltmeter sehr ungenau misst und gleichzeitig wahrscheinlich auch noch ein wenig Strom verbraucht. Es wird auch angenommen, dass die Kondensatoren nicht 100\% der Ladung gespeichert halten können. Nur ist die Zeit, in welcher die Kondensatoren Energie abgeben können sehr kurz, und es wird aufgrund dessen mit einer kleinen Verfälschung des Ergebnissses gerechnet.\\
+
+Es geht Energie verloren sobald die Kabel vom Netzgerät in den \textit{Kondensator 1} gesteckt werden, da es meist blizt. Da Licht ja auch Energie ist, kann abgeleitet werden, dass dort Strom verloren geht. Es wird nicht angenommen, dass diese Verfälschung des Ergebnisses aber allzu gross sein wird.\\
+
+Es gibt auch noch weitere Fehlerquelle von welchen aber ausgegangen wird das sie nicht einen grossen einfluss auf das Ergebniss haben. Einer dieser Fehlerquellen ist das ein Kabel warscheinlich nicht zu 100\% isoliert und somit geht ein kleiner Teil des übertragenen Stromes als Wärme verloren.\\
 
 
 %Ein systematisch Fehler bestand darin, dass das Kalorimeter nicht zu 100\% isoliert und durch die Wände konstant Energie an die Umwelt abgegeben wird. Vorallem da das Kalorimeter nach oben offen war, entstanden dabei beträchtlich mehr Wärmeverluste am Wasser an die Umgebung als nur den Wänden.\\
