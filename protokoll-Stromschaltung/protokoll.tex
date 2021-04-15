@@ -87,20 +87,35 @@ Die Kirchhoff'sche Gesetze sollen mittels eines Experiments überprüft werden.
 \subsection{Maschenregel}
 
 Wird ein geschlossener Teilstromkreis ("Masche") betrachtet so gilt, dass die Summe der 
-Teilspannungen der der Totalspannung entspricht:
+Teilspannungen der der Totalspannung entspricht. Liegt an der Masche kein Spannungsquelle an so
+gilt:
 
-\begin{figure}[H]
+\[\sum_{k = 1}^{n} I_k = 0 \]
+%\[ \sum_{n=0}^N
 
-\centering
-\includegraphics[width=.3\textwidth]{media/MaschenKnoten3-1.png}
-%https://images.app.goo.gl/2RF94U17Uti48saU6
-
-\[ \sum_{n=0}^N \]
-\end{figure}
 
 \subsection{Knotenregel}
 
+Die Summe der eingehenden Ströme ist gleich der Summe der ausgehend Ströme in jedem 
+Verzweigungspunkt ("Knoten"):
+
+\[\sum I_{ein} = \sum I_{aus}\]
+
+
 \subsection{Serieschaltung}
+
+\begin{figure}[H]
+
+\includegraphics[width=.4\textwidth]{media/SerieschaltFert.png}
+
+Die Knotenregel sagt aus, dass der selbe Strom $I_0$ durch alle Wiederstände $R_i$ fliesst. Durch
+die Maschenregel ergibt sich dann:
+
+\[U_0 = \sum_{i=1}^{n} R_i I_0 ,\ I_0 = \frac{U_0}{\sum_{i=1}^{n} R_i }\] 
+
+Die Spannung teilt sich somit direkt proportional auf die einlenen Wiederstände auf.
+
+\end{figure}
 
 \subsection{Parallelschaltung}
 
