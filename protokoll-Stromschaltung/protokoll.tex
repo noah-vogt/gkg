@@ -28,6 +28,9 @@ includeheadfoot}
 \rfoot{Seite \thepage}
 \renewcommand{\footrulewidth}{.4pt}
 
+%for the circuit
+\usepackage[siunitx, european]{circuitikz}
+
 % fix figure positioning
 \usepackage{float}
 
@@ -84,7 +87,8 @@ Die Kirchhoff'sche Gesetze sollen mittels eines Experiments überprüft werden.
 
 \section{Physikalischer Hintergrund}
 
-\subsection{Maschenregel}
+\subsection{Kirchhoffischen Gesetze}
+\subsubsection{Maschenregel}
 
 Wird ein geschlossener Teilstromkreis ("Masche") betrachtet so gilt, dass die Summe der 
 Teilspannungen der der Totalspannung entspricht. Liegt an der Masche kein Spannungsquelle an so
@@ -94,7 +98,7 @@ gilt:
 %\[ \sum_{n=0}^N
 
 
-\subsection{Knotenregel}
+\subsubsection{Knotenregel}
 
 Die Summe der eingehenden Ströme ist gleich der Summe der ausgehend Ströme in jedem 
 Verzweigungspunkt ("Knoten"):
@@ -111,47 +115,82 @@ Verzweigungspunkt ("Knoten"):
 Die Knotenregel sagt aus, dass der selbe Strom $I_0$ durch alle Wiederstände $R_i$ fliesst. Durch
 die Maschenregel ergibt sich dann:
 
-\[U_0 = \sum_{i=1}^{n} R_i I_0 ,\ I_0 = \frac{U_0}{\sum_{i=1}^{n} R_i }\] 
+\[U_0 = \sum_{k=1}^{n} R_k I_0 ,\ I_0 = \frac{U_0}{\sum_{k=1}^{n} R_k }\] 
 
 Die Spannung teilt sich somit direkt proportional auf die einlenen Wiederstände auf.
 
 \end{figure}
 
+\newpage
+
 \subsection{Parallelschaltung}
 
-(4. Ersatzwiederstand/Gesamtspannung)
-
-\section{Versuchsaufbau}
 \begin{figure}[H]
+
+\includegraphics[width=.4\textwidth]{media/ParallelschaltungFert.png}
+
+\end{figure}
+
+Nach der Maschenregel liegt über allen Wiederständen die gleiche Spannung $U_0$ und nach der 
+Knotenregel beträgt die Summe der Teilströme den Gesamtstrom $I_0$:
+
+\[ I_0 = \sum_{k=1}^{n} I_k \]
+
+und 
+
+\[ U_0 = R_1 I_1 = R_2 I_2 = ...R_n I_n \]
+
+Der Strom wird also indirekt Proportional zu den Wiederständen aufgeteilt. \\
+Nach Auflösen der zweiten Gleichung nach $I_j$ mit $1 \leq j \leq n$ und einsetzen in die erste
+ergibt sich:
+
+\[ I_0 = \frac{U_0}{R_1} + \frac{U_0}{R_2} + ... + \frac{U_0}{R_n} = U_0 \sum_{n=1}^k \frac{1}{R_n} \]
+
+
+
+\subsection{((4. Ersatzwiederstand/Gesamtspannung))}
+\section{Versuchsaufbau}
+%\begin{figure}[H]
 
 %\centering
 %\includegraphics[width=.8\textwidth]{media/bennenung.png}
 
+\rotatebox[origin=c]{90}{\includegraphics[width=.5\textwidth]{media/ExpSchaltQuerAll.jpeg}}
+
+%\end{figure}
+
+\begin{figure}[H]
+
 \centering
-\includegraphics[width=.5\textwidth]{../BilderExperiment/ExpSchaltQuerAll.jpeg}
+\includegraphics[width=.3\textwidth]{media/ExpSchaltGer.jpeg}
 
 \end{figure}
 
-\section{Versuchsdurchführung}
-\begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
-        \hline
-        \textbf{Beschreibung} & \textbf{Abkürzung} & \textbf{Wert} \\
-        \hline
-        Kapazität bekannter Kondensator & $C_{b}$ & $(4.38\pm 0.005 )\mu F$\\
-        \hline
-        Spannung bekannter Kondensator 1 & $u_{1}$ & $(260\pm 2.5)V$\\
-        Spannung bekannter Kondensator 2 & $u_{2}$ & $(300\pm 2.5)V$\\
-        Spannung bekannter Kondensator 3 & $u_{3}$ & $(280\pm 2.5)V$\\
-        \hline
-        Spannung nach dem Ausgleich 1 & $u_{1}'$ & $(178\pm 2.5)V$\\
-        Spannung nach dem Ausgleich 2 & $u_{2}'$ & $(201\pm 2.5)V$\\
-        Spannung nach dem Ausgleich 3 & $u_{3}'$ & $(192\pm 2.5)V$\\
-        \hline
-    \end{tabular}
-\end{table}
+\begin{center}
+\begin{circuitikz}[scale = 2.5]
+     \draw (0,0)
+         to[isource, l=$I_0$,] (0,3)
+         to[short, -*, i=$I_0$] (2,3)
+         to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
+         \draw (2,3) -- (4,3)
+         to[R=$R_2$, i>_=$i_2$]
+         (4,0) to[short, -*] (2,0);
+\end{circuitikz}
+\end{center}
 
+\begin{center}
+\begin{circuitikz}[scale = 2.5]
+
+    \draw (0,0) 
+        to[isource, l=$I_0$] (4,0)
+        to[R=$R_1$] (2,0)-- (4,0);
+        
+
+
+\end{circuitikz}
+\end{center}
+
+\section{Versuchsdurchführung}
 Als erstes wird die Kapazität vom \textit{Kondensator 2} abgelesen und an das Netzgerät mit den Kabeln angeschlossen. Das \textit{statische Voltmeter} wird an den \textit{Kondensator 2} angeschlossen und das Netzgerät wird angeschaltet. Der \textit{Kondensator 2} wird mit einer gewissen Menge Volt geladen, welche vom \textit{Voltmeter} ablesen wird. Die Kabel werden von dem Netzgerät entfernt - ohne eine Berührung mit etwas anderem - und in den \textit{Kondensator 1} gesteckt. Die Spannung wird nach dieser Parallelschaltung der beiden Kondensatoren nochmals gemessen, wenn diese stabil ist. Nun werden die Kondensatoren einzeln mit der Glühbirne Parallelgeschalten und dadurch entladen. Der ganze Vorgang wird schliesslich dreimal wiederholt mit unterschiedlicher Ausgangsspannung. 
 
 \newpage
