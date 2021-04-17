@@ -70,12 +70,12 @@ includeheadfoot}
 	
 	{\scshape\Large Protokolle Praktikum Physik 3cg \par}
 	\vspace{0.5cm}
-	{\huge\bfseries Die experimentelle Bestimmung der Kapazität eines unbekannten Kondensators\par}
+	{\huge\bfseries Die experimentelle Prüfung der Kirchhoff'schen Gesetze\par}
 	\vspace{0.5cm}
 	{\Large Noah Vogt \& Simon Hammer\par}
 	\vspace{17cm}
 
-	{\large Durchgeführt am 27. Oktober 2020\par}
+	{\large Durchgeführt am 26.Januar 2021\par}
 	
 \end{titlepage}
 
@@ -182,10 +182,14 @@ ergibt sich:
 \begin{circuitikz}[scale = 2.5]
 
     \draw (0,0) 
-        to[isource, l=$I_0$] (4,0)
-        to[R=$R_1$] (2,0)-- (4,0);
+        to[isource, l=$I_0$] (-4,0) 
+        to [short, -*] (-4,-2)
+        to [short, -*] (-3,-2)
+        to [short, -*] (-3,-1)
+        to [short, -*] (-1,-1)
+        to [short, -*] (-1,-2)
+        to [short, -*] (0,-2)  --  (0,0);
         
-
 
 \end{circuitikz}
 \end{center}
