@@ -157,39 +157,56 @@ ergibt sich:
 
 \rotatebox[origin=c]{90}{\includegraphics[width=.5\textwidth]{media/ExpSchaltQuerAll.jpeg}}
 
-%\end{figure}
-
-\begin{figure}[H]
-
-\centering
-\includegraphics[width=.3\textwidth]{media/ExpSchaltGer.jpeg}
-
-\end{figure}
-
-\begin{center}
-\begin{circuitikz}[scale = 2.5]
-     \draw (0,0)
-         to[isource, l=$I_0$,] (0,3)
-         to[short, -*, i=$I_0$] (2,3)
-         to[R=$R_1$, i>_=$i_1$] (2,0) -- (0,0);
-         \draw (2,3) -- (4,3)
-         to[R=$R_2$, i>_=$i_2$]
-         (4,0) to[short, -*] (2,0);
-\end{circuitikz}
-\end{center}
 
 \begin{center}
 \begin{circuitikz}[scale = 2.5]
 
+    %circuit
     \draw (0,0) 
-        to[isource, l=$I_0$] (-4,0) 
-        to [short, -*] (-4,-2)
-        to [short, -*] (-3,-2)
-        to [short, -*] (-3,-1)
-        to [short, -*] (-1,-1)
-        to [short, -*] (-1,-2)
-        to [short, -*] (0,-2)  --  (0,0);
-        
+        to[isource, l=$I_0$, i=$I_0$] (4,0) 
+        to [R=$R_1$ (\SI{18}{\ohm}), -*] (4,2)
+        to [R=$R_2$ (\SI{20}{\ohm}), -*] (3,2)
+        to [short]     (3,1.5)
+        to [R=$R_3$ (\SI{18}{\ohm})]     (2,1.5)
+        to [R=$R_4$ (\SI{20}{\ohm})]     (1,1.5)
+        to [short, -*] (1,2)
+        to [short, -*] (0,2)  --  (0,0);
+
+    \draw (1,2)
+        to [short] (1,2.5)
+        to [R=$R_5 $(\SI{20}{\ohm})] (3,2.5) 
+        to [short] (3,2);
+    
+    \draw (0,2)
+        to [R=$R_6$ (\SI{20}{\ohm})]     (0,4)
+        to [short, -*] (1,4)
+        to [short]     (1,3.5)
+        to [R=$R_7$ (\SI{20}{\ohm})]     (3,3.5)
+        to [short, -*] (3,4)
+        to [short]     (4,4)
+        to [short]     (4,2);
+
+    \draw (1,4)
+        to [short]      (1,4.5)
+        to [R=$R_9$ (\SI{20}{\ohm})]      (2,4.5)
+        to [R=$R_8$ (\SI{18}{\ohm})]      (3,4.5)
+        to [short]      (3,4);
+
+    %arrows
+    \draw (3.85,2)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_1$]{};
+    \draw (3,2.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_x$]{};
+    \draw (3,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_x$]{};
+    \draw (0.85,2)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_1$]{};
+    \draw (4,2.13)node[flowarrow,color = red, rotate = 90, label = right: \color{black}$I_2$]{};
+    \draw (3,4.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_x$]{};
+    \draw (3,3.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_x$]{};
+    \draw (0.85,4)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_2$]{};
+    \draw (0,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_0$]{};
+
+
+
+
+
 
 \end{circuitikz}
 \end{center}
