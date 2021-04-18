@@ -252,11 +252,11 @@ Der Ersatzwiderstand verändert \textit{nicht} die Gesamtstromstärke.
     \end{tabular}
 \end{table}
 
-Zuerst wurde das ganze Steckbrett mit den integrierten Widerständen verkabelt nach Vorgabe und das Ampèremeter angeschlossen. Entsprechend den herrschenden Widerständen und erwarteten maximalen Stromstärken und Spannungen mussten die Einstellungen an Volt- und Ampèremeter angepasst werden. Nach genauem Nachkontrollieren, ob das Steckbrett wirklich korrekt aufgebaut worden ist, wurde schliesslich das Netzgerät an die Schaltung angeschlossen. \\
+Zuerst wurde nach Vorgabe das ganze Steckbrett mit den integrierten Widerständen verkabelt und das Ampèremeter angeschlossen. Entsprechend den herrschenden Widerständen und erwarteten maximalen Stromstärken und Spannungen mussten die Einstellungen an Volt- und Ampèremeter angepasst werden. Nach genauem Nachkontrollieren, ob das Steckbrett wirklich korrekt aufgebaut worden ist, wurde schliesslich das Netzgerät an die Schaltung angeschlossen. \\
 
-Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Das Voltmeter wurde für die Messungen einzeln zu jedem Widerstand parallelgeschalten und der angezeigte Wert wurde abgelesen. Mit einer Achtung darauf, ob eines der Kabel, Messgeräte oder Widerstände durchbrennen, wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und die Spannung am Netzgerät nur konservativ erhöht wurde, um den Fall eines durchbrennenden Widerstands vorbeugend zu minimieren.\\
+Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Das Voltmeter wurde für die Messungen einzeln zu jedem Widerstand parallelgeschalten und der angezeigte Wert wurde abgelesen. Mit einer Achtung darauf, ob eines der Kabel, Messgeräte oder Widerstände durchbrennt, wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und um den Fall eines durchbrennenden Widerstands vorbeugend zu minimieren.\\
 
-Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wider abgeschalten, vom Netz getrennt und alle sonstigen am Steckbrett angeschlossenen Gerätschaften wider entfernt und versorgt.
+Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wieder abgeschaltet, vom Netz getrennt und alle sonstigen am Steckbrett angeschlossenen Gerätschaften wieder entfernt und versorgt.
 
 \newpage
 
@@ -264,31 +264,31 @@ Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wider abgeschalten
 
 \subsection{Ersatzwiderstände berechnen}
 
-Um die obere Masche mit den Widerständen $R_7$, $R_8$ und $R_9$ (siehe Schaltkreis in 3.) zu vereinfachen, beginnen zuerst mit der Vereinfachung der Serieschaltung.
+Um die obere Masche mit den Widerständen $R_7$, $R_8$ und $R_9$ (siehe Schaltkreis in 3.) zu vereinfachen, beginnen zuerst mit der Vereinfachung der Serieschaltung:
 
 $$R_{8,9} = R_9 + R_8 = 20\;\Omega + 18 \;\Omega = 38 \;\Omega$$
 
-Dann folgt die Parallelschaltung.
+Dann folgt die Parallelschaltung:
 
 $$R_{7,8,9} = \frac{R_{8,9} \cdot R_7}{R_{8,9} + R_7} = \frac{38 \;\Omega \cdot 20\; \Omega}{38\; \Omega + 20\; \Omega} = \frac{380}{29}\Omega$$\\
 
-Analog dazu lässt sich der obere Rechenweg auch anwenden auf die untere Masche mit $R_3$, $R_4$ und $R_5$.
+Analog dazu lässt sich der obere Rechenweg auch anwenden auf die untere Masche mit $R_3$, $R_4$ und $R_5$:  
 
 $$R_{3,4} = R_4 + R_3 = 20 \;\Omega + 18 \;\Omega = 38 \;\Omega$$
 
 $$R_{3,4,5} = \frac{R_{3,4} \cdot R_5}{R_{3,4} + R_5} = \frac{38\; \Omega \cdot 20\; \Omega}{38\; \Omega + 20\; \Omega} = \frac{380}{29}\Omega$$\\
 
-Nun vereinfachen wir die entstandenen Serieschaltungen von jeweils $R_{3,4,5}$ mit $R_2$ und $R_{7,8,9}$ mit $R_6$.
+Nun vereinfachen wir die entstandenen Serieschaltungen von jeweils $R_{3,4,5}$ mit $R_2$ und $R_{7,8,9}$ mit $R_6$:
 
 $$R_{6,7,8,9} = R_6 + R_{7,8,9} = 20\; \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$
 
 $$R_{2,3,4,5} = R_2 + R_{3,4,5} = 20\; \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$\\
 
-Nun können $R_{2,3,4,5}$ und $R_{6,7,8,9}$ parallelgeschaltet werden.
+Nun können $R_{2,3,4,5}$ und $R_{6,7,8,9}$ parallelgeschaltet werden:
 
 $$R_{2,3,4,5,6,7,8,9} = \frac{R_{2,3,4,5} \cdot R_{6,7,8,9}}{R_{2,3,4,5} + R_{6,7,8,9}} = \frac{\frac{960}{29}\Omega \cdot \frac{960}{29}\Omega}{\frac{960}{29}\Omega + \frac{960}{29}\Omega} = \frac{480}{29}\Omega$$\\
 
-Mit einer letzten Serieschaltung mit $R_1$ gelangen wir zum gesamten Ersatzwiderstand $R_{ges}$.
+Mit einer letzten Serieschaltung mit $R_1$ gelangen wir zum gesamten Ersatzwiderstand $R_{ges}$:
 
 $$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{1002}{29}\Omega = 34.55 \;\Omega$$
 
@@ -368,13 +368,13 @@ $$I_6 = 3.70\; \cdot 10^{-2} A$$
 
 \subsection{Gesamtstromstärke $I_{ges}$}
 
-$$I_{ges} = \frac{U_{ges}}{R_{ges}} = \frac{3.90 \pm 0.005 V}{34.55\Omega} = 0.113 \;A = 1.13 \cdot 10^{-1} A$$
+$$I_{ges} = \frac{U_{ges}}{R_{ges}} = \frac{3.90 V}{34.55\Omega} = 0.113 \;A = 1.13 \cdot 10^{-1} A$$
 
 \subsection{Stromspannungen berechnen}
 
 \subsubsection{Teilspannungen $U_{1\;,\;2\;,\; ...\;,\; 9}$}
 
-Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in $$U = R \cdot I$$ eingesetzt werden. Für die spätere Fehlerrechnung werden die Teilspannungen aber noch in Minimal- und Maximalwerte aufgeteilt.\\
+Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in $$U = R \cdot I$$ eingesetzt werden.\\
 
 \begin{table}[H]
 \centering
@@ -417,7 +417,7 @@ $$U_{theo} = 7.25\; V$$
 
 \subsection{Experimentsziel}
 
-Trotz gewissen Abweichungen der Werte haben sich die Kirchhoff'schen Gesetze soweit bestätigt. Es konnte anhand dieses Experiments kein systematischer Fehler an den Kirchhoff'schen Gesetzen gefunden werden.
+Trotz gewissen Abweichungen der Werte haben sich die Kirchhoff'schen Gesetze soweit bestätigt. Es konnte anhand dieses Experiments keine Fehler an den Kirchhoff'schen Gesetzen gefunden werden.
 
 \subsection{Genauigkeit}
 
@@ -433,7 +433,7 @@ Wie erwartet sind die theoretischen Ergebnisse grösser als die praktischen. Die
 
 \subsection{Fehlerquellen}
 
-Als grundlegender systematischer Fehler bestand natürlich darin, dass das Experiment nicht in einem abgeschlossenen System durchgeführt wurde. Es wird also angenommen, dass elektrische Energie aus der Schaltung an die Umwelt abgegen wurde in der Form von Wärme.\\
+Ein grundlegender systematischer Fehler bestand natürlich darin, dass das Experiment nicht in einem abgeschlossenen System durchgeführt wurde. Es wird also angenommen, dass elektrische Energie aus der Schaltung an die Umwelt abgegen wurde in der Form von Wärme.\\
 
 Es kann auch davon ausgegangen werden, dass die Angaben des Netzgerätes nicht genau sind. Die Widerstände könnten auch nicht ganz exakt sein.\\
 
