@@ -228,27 +228,27 @@ Der Ersatzwiederstand verändert \textit{nicht} die Gesamtstromstärke.
     \centering
     \begin{tabular}{|c|c|}
         \hline
-        \textbf{Widerstand} & \textbf{Spannung [$V$]}\\
+         & \textbf{gemessene Spannung U [V]}\\
         \hline
-        $R_{Netz}$ & 3.90$V$\\
+        $U_{Netz}$ & $3.90\pm 0.005$\\
         \hline
-        $R_1$ & 1.78$V$\\
+        $U_1$ & $1.78\pm 0.005$\\
         \hline
-        $R_2$ & 1.00$V$\\
+        $U_2$ & $1.00\pm 0.005$\\
         \hline
-        $R_3$ & 0.31$V$\\
+        $U_3$ & $0.31\pm 0.005$\\
         \hline
-        $R_4$ & 0.34$V$\\
+        $U_4$ & $0.34\pm 0.005$\\
         \hline
-        $R_5$ & 0.65$V$\\
+        $U_5$ & $0.65\pm 0.005$\\
         \hline
-        $R_6$ & 1.02$V$\\
+        $U_6$ & $1.02\pm 0.005$\\
         \hline
-        $R_7$ & 0.63$V$\\
+        $U_7$ & $0.63\pm 0.005$\\
         \hline
-        $R_8$ & 0.30$V$\\
+        $U_8$ & $0.30\pm 0.005$\\
         \hline
-        $R_9$ & 0.33$V$\\
+        $U_9$ & $0.33\pm 0.005$\\
         \hline
     \end{tabular}
 \end{table}
@@ -295,11 +295,23 @@ Mit einer letzten Serieschaltung mit $R_1$ gelangen wir zum gesamten Ersatzwider
 
 $$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{1002}{29}\Omega = 34.55\Omega$$
 
+\newpage
+
 \subsection{Stromspannungen berechnen}
 
 \subsubsection{Gesamtstromstärke $I_{ges}$}
 
-\subsubsection{Teilstromstärken $I_{1\;,\;2\;,\; ...\;,\; 9}$}
+$$I_{ges} = \frac{U_{ges}}{R_{ges}} = \frac{3.90 \pm 0.005 V}{34.55\Omega} = 0.113 \;A = 1.13 \cdot 10^{-1} A$$
+
+\subsubsection{Teilspannungen $U_{1\;,\;2\;,\; ...\;,\; 9}$}
+
+Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in $$U_{i} = R_{i}\cdot I_{ges}$$ eingesetzt werden. Für die spätere Fehlerrechnung werden die Teilspannungen aber noch in Minimal- und Maximalwerte aufgeteilt.\\
+
+[TABELLE MIT MINIMALEN UND MAXIMALEN WERTEN]\\
+
+Abschliessend können wir die Gesamtspannung $R_{ges}$ berechnen. Diese soll dabei annährend der Netzspannung $U_Netz$ entsprechen. Mithilfe einer Fehlerrechnung können wir die Genauigkeit der Experimentdurchführung bestimmen.
+
+$$U_{ges} = U_{1\;,\;2\;,\; ...\;,\; 9} != 3.90\;V$$
 
 %$$C_u = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
 
