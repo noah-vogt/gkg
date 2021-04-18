@@ -85,7 +85,7 @@ includeheadfoot}
 \pagebreak
 
 \section{Versuchsziel}
-Die Kirchhoff'sche Gesetze sollen mittels eines Experiments überprüft werden. Dazu wurde ein Schaltkreis vorgegeben, der auf einem Steckbrett nachkonstruiert werden sollte. Mit einer Messung von Spannung und Stromstärke an spezifischen Stellen der Schaltung und Berechnung der Schaltung sollten die oben erwähnten Gesetzmässigkeiten überprüft und bestätigt werden.\\
+Die Kirchhoff'sche Gesetze sollen mittels eines Experiments überprüft werden. Dazu wurde ein Schaltkreis vorgegeben, der auf einem Steckbrett nachkonstruiert werden sollte. Mit einer praktischen Messung von Spannung und Stromstärke an spezifischen Stellen der Schaltung und getrennter theoretischer Berechnung der Schaltung mithilfe der Kirchhoff'schen Gesetze sollten die oben erwähnten Gesetzmässigkeiten nach ihrer Richtigkeit überprüft werden. Es wird erwartet, dass die theoretischen Werte dabei über den praktischen Werten liegen werden.\\
 
 Wenn nämlich die Rechnung und gemessenen Werte - im Rahmen einem gewissen zu erwartenden Fehlerbereich - übereinstimmen, sind die Gesetze experimentell bestätigt.
 \section{Physikalischer Hintergrund}
@@ -115,12 +115,12 @@ Verzweigungspunkt ("Knoten"):
 
 \includegraphics[width=.4\textwidth]{media/SerieschaltFert.png}
 
-Die Knotenregel sagt aus, dass der selbe Strom $I_0$ durch alle Wiederstände $R_i$ fliesst. Durch
+Die Knotenregel sagt aus, dass der selbe Strom $I_0$ durch alle Widerstände $R_i$ fliesst. Durch
 die Maschenregel ergibt sich dann:
 
 \[U_0 = \sum_{k=1}^{n} R_k I_0 ,\ I_0 = \frac{U_0}{\sum_{k=1}^{n} R_k }\] 
 
-Die Spannung teilt sich somit direkt proportional auf die einlenen Wiederstände auf.
+Die Spannung teilt sich somit direkt proportional auf die einzelnen Widerstände auf.
 
 \end{figure}
 
@@ -134,7 +134,7 @@ Die Spannung teilt sich somit direkt proportional auf die einlenen Wiederstände
 
 \end{figure}
 
-Nach der Maschenregel liegt über allen Wiederständen die gleiche Spannung $U_0$ und nach der 
+Nach der Maschenregel liegt über allen Widerständen die gleiche Spannung $U_0$ und nach der 
 Knotenregel beträgt die Summe der Teilströme den Gesamtstrom $I_0$:
 
 \[ I_0 = \sum_{k=1}^{n} I_k \]
@@ -143,7 +143,7 @@ und
 
 \[ U_0 = R_1 I_1 = R_2 I_2 = ...R_n I_n \]
 
-Der Strom wird also indirekt Proportional zu den Wiederständen aufgeteilt. \\
+Der Strom wird also indirekt Proportional zu den Widerständen aufgeteilt. \\
 Nach Auflösen der zweiten Gleichung nach $I_j$ mit $1 \leq j \leq n$ und einsetzen in die erste
 ergibt sich:
 
@@ -151,23 +151,25 @@ ergibt sich:
 
 
 
-\subsection{Ersatzwiederstand}
+\subsection{Ersatzwiderstand}
 
 Die Gesamtstromstärke $I_0$, ist die Stromstärke, welche vor dem ersten Knoten herscht. \\
 Die Gesamtspannung $U_0$, ist die Spannung, welche an das Stromnetz angelegt wird. \\
-Wird das ganze Wiederstandsnetz mit einem Wiederstand ersetzt, so heisst dieser Ersatzwiederstand. 
+Wird das ganze Widerstandsnetz mit einem Widerstand ersetzt, so heisst dieser Ersatzwiderstand. 
 
 \[ R_E = \frac{U_0}{I_0} \]
 
-Der Ersatzwiederstand verändert \textit{nicht} die Gesamtstromstärke. 
+Der Ersatzwiderstand verändert \textit{nicht} die Gesamtstromstärke. 
 
 \section{Versuchsaufbau}
 %\begin{figure}[H]
 
 %\centering
 %\includegraphics[width=.8\textwidth]{media/bennenung.png}
-
+\begin{figure}[H]
+\centering
 \rotatebox[origin=c]{90}{\includegraphics[width=.5\textwidth]{media/ExpSchaltQuerAll.jpeg}}
+\end{figure}
 
 
 \begin{center}
@@ -216,11 +218,6 @@ Der Ersatzwiederstand verändert \textit{nicht} die Gesamtstromstärke.
     \draw (0.85,4)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_2$]{};
     \draw (0,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_0$]{};
 
-
-
-
-
-
 \end{circuitikz}
 \end{center}
 
@@ -257,9 +254,9 @@ Der Ersatzwiederstand verändert \textit{nicht} die Gesamtstromstärke.
 
 Zuerst wurde das ganze Steckbrett mit den integrierten Widerständen verkabelt nach Vorgabe und das Ampèremeter angeschlossen. Entsprechend den herrschenden Widerständen und erwarteten maximalen Stromstärken und Spannungen mussten die Einstellungen an Volt- und Ampèremeter angepasst werden. Nach genauem Nachkontrollieren, ob das Steckbrett wirklich korrekt aufgebaut worden ist, wurde schliesslich das Netzgerät an die Schaltung angeschlossen. \\
 
-Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Das Voltmeter wurde für die Messungen einzeln zu jedem Wiederstand parallelgeschalten und der angezeigte Wert wurde abgelesen. Mit einer Achtung darauf, ob eines der Kabel, Messgeräte oder Wiederstände durchbrennen, wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und die Spannung am Netzgerät nur konservativ erhöht wurde, um den Fall eines durchbrennenden Widerstands vorbeugend zu minimieren.\\
+Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Das Voltmeter wurde für die Messungen einzeln zu jedem Widerstand parallelgeschalten und der angezeigte Wert wurde abgelesen. Mit einer Achtung darauf, ob eines der Kabel, Messgeräte oder Widerstände durchbrennen, wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und die Spannung am Netzgerät nur konservativ erhöht wurde, um den Fall eines durchbrennenden Widerstands vorbeugend zu minimieren.\\
 
-Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wieder abgeschalten, vom Netz getrennt und alle sonstigen am Steckbrett angeschlossenen Gerätschaften wieder entfernt und versorgt.
+Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wider abgeschalten, vom Netz getrennt und alle sonstigen am Steckbrett angeschlossenen Gerätschaften wider entfernt und versorgt.
 
 \newpage
 
@@ -269,23 +266,23 @@ Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wieder abgeschalte
 
 Um die obere Masche mit den Widerständen $R_7$, $R_8$ und $R_9$ (siehe Schaltkreis in 3.) zu vereinfachen, beginnen zuerst mit der Vereinfachung der Serieschaltung.
 
-$$R_{8,9} = R_9 + R_8 = 20 \Omega + 18 \Omega = 38 \Omega$$
+$$R_{8,9} = R_9 + R_8 = 20\;\Omega + 18 \;\Omega = 38 \;\Omega$$
 
 Dann folgt die Parallelschaltung.
 
-$$R_{7,8,9} = \frac{R_{8,9} \cdot R_7}{R_{8,9} + R_7} = \frac{38 \Omega \cdot 20 \Omega}{38 \Omega + 20 \Omega} = \frac{380}{29}\Omega$$\\
+$$R_{7,8,9} = \frac{R_{8,9} \cdot R_7}{R_{8,9} + R_7} = \frac{38 \;\Omega \cdot 20\; \Omega}{38\; \Omega + 20\; \Omega} = \frac{380}{29}\Omega$$\\
 
 Analog dazu lässt sich der obere Rechenweg auch anwenden auf die untere Masche mit $R_3$, $R_4$ und $R_5$.
 
-$$R_{3,4} = R_4 + R_3 = 20 \Omega + 18 \Omega = 38 \Omega$$
+$$R_{3,4} = R_4 + R_3 = 20 \;\Omega + 18 \;\Omega = 38 \;\Omega$$
 
-$$R_{3,4,5} = \frac{R_{3,4} \cdot R_5}{R_{3,4} + R_5} = \frac{38 \Omega \cdot 20 \Omega}{38 \Omega + 20 \Omega} = \frac{380}{29}\Omega$$\\
+$$R_{3,4,5} = \frac{R_{3,4} \cdot R_5}{R_{3,4} + R_5} = \frac{38\; \Omega \cdot 20\; \Omega}{38\; \Omega + 20\; \Omega} = \frac{380}{29}\Omega$$\\
 
 Nun vereinfachen wir die entstandenen Serieschaltungen von jeweils $R_{3,4,5}$ mit $R_2$ und $R_{7,8,9}$ mit $R_6$.
 
-$$R_{6,7,8,9} = R_6 + R_{7,8,9} = 20 \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$
+$$R_{6,7,8,9} = R_6 + R_{7,8,9} = 20\; \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$
 
-$$R_{2,3,4,5} = R_2 + R_{3,4,5} = 20 \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$\\
+$$R_{2,3,4,5} = R_2 + R_{3,4,5} = 20\; \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$\\
 
 Nun können $R_{2,3,4,5}$ und $R_{6,7,8,9}$ parallelgeschaltet werden.
 
@@ -293,13 +290,13 @@ $$R_{2,3,4,5,6,7,8,9} = \frac{R_{2,3,4,5} \cdot R_{6,7,8,9}}{R_{2,3,4,5} + R_{6,
 
 Mit einer letzten Serieschaltung mit $R_1$ gelangen wir zum gesamten Ersatzwiderstand $R_{ges}$.
 
-$$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{1002}{29}\Omega = 34.55\Omega$$
+$$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{1002}{29}\Omega = 34.55 \;\Omega$$
 
 \newpage
 
 \subsection{theoretische Stromstärken}
 
-Da bei der Verzweigung von $I_1$ und $I_2$ die Wiederstände gleich sind, müssen auch die Stromstärken gleich sein. Es gilt also:
+Da bei der Verzweigung von $I_1$ und $I_2$ die Widerstände gleich sind, müssen auch die Stromstärken gleich sein. Es gilt also:
 
 \begin{equation}
 I_1 = I_2
@@ -334,11 +331,11 @@ I_2 = I_5 + I_6
 Anhand der Maschenregel gilt mit dem Versuch eine möglichst unkomplizierte Gleichung aufzustellen:
 
 \begin{equation}
-I_0 \cdot R_1 + I_1 \cdot R_2 + I_3 \cdot R_5 = I_0 \cdot 18 \Omega + I_1 \cdot 20 \Omega + I_3 \cdot 20\Omega = U_0
+I_0 \cdot R_1 + I_1 \cdot R_2 + I_3 \cdot R_5 = I_0 \cdot 18 \Omega + I_1 \cdot 20\; \Omega + I_3 \cdot 20\;\Omega = U_0
 \end{equation}
 
 \begin{equation}
-I_4 \cdot (R_3 + R_4) - I_3 \cdot R_5 = I_4 \left(20+18\right)\Omega - I_3 \cdot 20\Omega = 0
+I_4 \cdot (R_3 + R_4) - I_3 \cdot R_5 = I_4 \left(20+18\right)\Omega - I_3 \cdot 20\;\Omega = 0
 \end{equation}
 
 Aus Gleichung (1) und (4) folgt:
@@ -368,11 +365,12 @@ $$I_4 = 1.95\; \cdot 10^{-2} A$$
 $$I_5 = 1.95\; \cdot 10^{-2} A$$
 $$I_6 = 3.70\; \cdot 10^{-2} A$$
 
-\subsection{Stromspannungen berechnen}
 
-\subsubsection{Gesamtstromstärke $I_{ges}$}
+\subsection{Gesamtstromstärke $I_{ges}$}
 
 $$I_{ges} = \frac{U_{ges}}{R_{ges}} = \frac{3.90 \pm 0.005 V}{34.55\Omega} = 0.113 \;A = 1.13 \cdot 10^{-1} A$$
+
+\subsection{Stromspannungen berechnen}
 
 \subsubsection{Teilspannungen $U_{1\;,\;2\;,\; ...\;,\; 9}$}
 
@@ -405,43 +403,47 @@ Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in
     \end{tabular}
 \end{table}
 
+\subsubsection{Gesammtspannung $U_{ges}$}
+
 Abschliessend können wir die Gesamtspannung $U_{ges}$ berechnen. Wir vergleichen dabei das Ergebnis der Gesamtspannung welche entweder aus theoretischen oder praktischen Werten besteht.
 
 $$U_{ges} = U_{1\;,\;2\;,\; ...\;,\; 9}$$
 
-$$U_{theo} = 6.36\; V$$
+$$U_{prak} = 6.36\; V$$
 
-$$U_{prak} = 7.25\; V$$
+$$U_{theo} = 7.25\; V$$
 
 \section{Kommentar / Diskussion}
 
+\subsection{Experimentsziel}
+
+Trotz gewissen Abweichungen der Werte haben sich die Kirchhoff'schen Gesetze soweit bestätigt. Es konnte anhand dieses Experiments kein systematischer Fehler an den Kirchhoff'schen Gesetzen gefunden werden.
+
 \subsection{Genauigkeit}
 
-Da die Kapazität des \textit{Kondensators 1} nicht bekannt ist, kann keine genaue Aussage über die Genauigkeit des Experiments getroffen werden. Es wird aber immernoch eine Abweichung vom realen Wert angenommen, weil dieses Experiment gewisse Fehlerquellen aufweist (dazu später mehr). Ebenso wird von einer richtigen Berechnung ausgegangen.\\
+Die Gesamtspannung wurde je aus einem praktischen und theoretischen Wert zusammenaddiert. Beim Vergleichen der beiden Werte fällt auf, dass die praktische Spannung 12.3 \% unter der theoretischen Spannung liegt.\\
 
+Wie erwartet sind die theoretischen Ergebnisse grösser als die praktischen. Dies lässt sich dadurch begründen, dass alle bekannten Fehlerquellen zu einer Verringerung des praktischen gegenüber des theoretischen Wertes führen.
 
-
-%-Voltmeter recht ungenau, verbraucht vllt. sogar noch strom
-
-%Bei der Durchführung eins und drei ist eine sehr geringe Abweichung der Endresultate zu verzeichen. Zu dem Wert von Durchführung zwei ist aber auch nur eine kleine Abweichung zu verzeichenen. Es wird somit angenommen, dass bei \textit{keinem} der drei Durchgängen ein grosser Fehler unterlaufen ist. Aber leider lässt sich durch keine Beobachtung erklären, weshalb es zu dieser Abweichung beim Endresultat der zweiten Durchführung kam.
 
 %-energie geht verloren ein wenig bei der der parallelschaltung (keine 100\% ige effizienz)
 
-%-(wärme geht an umwelt verloren)
-
-%Bei den beiden Versuchsdurchgängen wurden beim ersten Mal eine Abweichung von \textit{13\%} und beim zweiten Mal \textit{37\%} festgestellt.\\
-
 %Aufgrund der vielen systematischen Fehler, da nicht in einem abgschlossenen System experimentiert werden konnte, kann die Ungenauigkeit der Messresultate erklärt werden. Der Tabellenwert $\num{3.338 e5}\si{\J\per\kg}$ \cite{formelsammlung} wurde wie erwartet unterschritten, da einige Energie aus unserem System an die Umgebung verloren ging.\\
 
-%Es ist noch anzumerken, dass bei der Berechnung keine Fehlerschranke bei der Masse gemacht wurde. Dies ist zu begründen, dass diese Ungenauigkeit im Vergleich zur Temperaturmessung vernachlässigbar ist.
 
 \subsection{Fehlerquellen}
 
-Ein Fehler besteht darin, dass das Voltmeter sehr ungenau misst und gleichzeitig wahrscheinlich auch noch ein wenig Strom verbraucht. Es wird auch angenommen, dass die Kondensatoren nicht 100\% der Ladung gespeichert halten können. Nur ist die Zeit, in welcher die Kondensatoren Energie abgeben können sehr kurz, und es wird aufgrund dessen mit einer kleinen Verfälschung des Ergebnissses gerechnet.\\
+Als grundlegender systematischer Fehler bestand natürlich darin, dass das Experiment nicht in einem abgeschlossenen System durchgeführt wurde. Es wird also angenommen, dass elektrische Energie aus der Schaltung an die Umwelt abgegen wurde in der Form von Wärme.\\
 
-Es geht Energie verloren sobald die Kabel vom Netzgerät in den \textit{Kondensator 1} gesteckt werden, da es meist blitzt beim Ein- oder Ausstecken der Kabel. Da Licht auch Energie ist, kann abgeleitet werden, dass dort Strom verloren geht. Es wird nicht angenommen, dass diese Verfälschung des Ergebnisses gross ist.\\
+Es kann auch davon ausgegangen werden, dass die Angaben des Netzgerätes nicht genau sind. Die Widerstände könnten auch nicht ganz exakt sein.\\
 
-Eine weitere Fehlerquelle besteht darin, dass die verwendeten Kabel wahrscheinlich nicht zu 100\% isoliert sind und somit ein kleiner Teil des übertragenen Stromes als Wärme verloren geht.
+Ein weiterer Fehler bestand darin, dass teilweise mit gerundeten Werten gerechnet wurde.\\
+
+%Ein Fehler besteht darin, dass das Voltmeter sehr ungenau misst und gleichzeitig wahrscheinlich auch noch ein wenig Strom verbraucht. Es wird auch angenommen, dass die Kondensatoren nicht 100\% der Ladung gespeichert halten können. Nur ist die Zeit, in welcher die Kondensatoren Energie abgeben können sehr kurz, und es wird aufgrund dessen mit einer kleinen Verfälschung des Ergebnissses gerechnet.\\
+
+%Es geht Energie verloren sobald die Kabel vom Netzgerät in den \textit{Kondensator 1} gesteckt werden, da es meist blitzt beim Ein- oder Ausstecken der Kabel. Da Licht auch Energie ist, kann abgeleitet werden, dass dort Strom verloren geht. Es wird nicht angenommen, dass diese Verfälschung des Ergebnisses gross ist.\\
+
+%Eine weitere Fehlerquelle besteht darin, dass die verwendeten Kabel wahrscheinlich nicht zu 100\% isoliert sind und somit ein kleiner Teil des übertragenen Stromes als Wärme verloren geht.
 
 
 %Ein systematisch Fehler bestand darin, dass das Kalorimeter nicht zu 100\% isoliert und durch die Wände konstant Energie an die Umwelt abgegeben wird. Vorallem da das Kalorimeter nach oben offen war, entstanden dabei beträchtlich mehr Wärmeverluste am Wasser an die Umgebung als nur den Wänden.\\
