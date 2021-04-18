@@ -227,44 +227,78 @@ Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wieder abgeschalte
 
 \section{Versuchsauswertung}
 
-$$C_u = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
+\subsection{Ersatzwiderstände berechnen}
 
-\subsection{Durchführung 1}
+Um die obere Masche mit den Widerständen $R_7$, $R_8$ und $R_9$ (siehe Schaltkreis in 3.) zu vereinfachen, beginnen zuerst mit der Vereinfachung der Serieschaltung.
 
-$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{1_{max}}-u_{1_{min}}'\cdot C_{b_{min}}}{u_{1_{min}}'}}$\\\\
+$$R_{8,9} = R_9 + R_8 = 20 \Omega + 18 \Omega = 38 \Omega$$
 
-$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 262.5\;V-175.5\;V\cdot 4.375\cdot 10^{-6}\;F}{175.5\;V}} = 2.184\cdot 10^{-6}\;F$\\\\
+Dann folgt die Parallelschaltung.
 
-$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{1_{min}}-u_{1_{max}}'\cdot C_{b_{max}}}{u_{1_{max}}'}}$\\\\
+$$R_{7,8,9} = \frac{R_{8,9} \cdot R_7}{R_{8,9} + R_7} = \frac{38 \Omega \cdot 20 \Omega}{38 \Omega + 20 \Omega} = \frac{380}{29}\Omega$$\\
 
-$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 257.5\;V-180.5\;V\cdot 4.385\cdot 10^{-6}\;F}{180.5\;V}} = 1.856\cdot 10^{-6}\;F$\\\\
+Analog dazu lässt sich der obere Rechenweg auch anwenden auf die untere Masche mit $R_3$, $R_4$ und $R_5$.
 
-$\Rightarrow C_{u_1}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2020052 (\pm 163709)\cdot F = 2.02 (\pm 0.16)\; \mu F$
+$$R_{3,4} = R_4 + R_3 = 20 \Omega + 18 \Omega = 38 \Omega$$
 
-\subsection{Durchführung 2}
+$$R_{3,4,5} = \frac{R_{3,4} \cdot R_5}{R_{3,4} + R_5} = \frac{38 \Omega \cdot 20 \Omega}{38 \Omega + 20 \Omega} = \frac{380}{29}\Omega$$\\
 
-$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{2_{max}}-u_{2_{min}}'\cdot C_{b_{min}}}{u_{2_{min}}'}}$\\\\
+Nun vereinfachen wir die entstandenen Serieschaltungen von jeweils $R_{3,4,5}$ mit $R_2$ und $R_{7,8,9}$ mit $R_6$.
 
-$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 302.5\;V-198.5\;V\cdot 4.375\cdot 10^{-6}\;F}{195.5\;V}} = 2.343\cdot 10^{-6}\;F$\\\\
+$$R_{6,7,8,9} = R_6 + R_{7,8,9} = 20 \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$
 
-$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{2_{min}}-u_{2_{max}}'\cdot C_{b_{max}}}{u_{2_{max}}'}}$\\\\
+$$R_{2,3,4,5} = R_2 + R_{3,4,5} = 20 \Omega + \frac{380}{29} \Omega = \frac{960}{29} \Omega$$\\
 
-$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 297.5\;V-203.5\;V\cdot 4.385\cdot 10^{-6}\;F}{203.5\;V}} = 2.011\cdot 10^{-6}\; F$\\\\
+Nun können $R_{2,3,4,5}$ und $R_{6,7,8,9}$ parallelgeschaltet werden.
 
-$\Rightarrow C_{u_2}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2176861 (\pm 165977)\cdot F = 2.18 (\pm 0.17)\; \mu F$
+$$R_{2,3,4,5,6,7,8,9} = \frac{R_{2,3,4,5} \cdot R_{6,7,8,9}}{R_{2,3,4,5} + R_{6,7,8,9}} = \frac{\frac{960}{29}\Omega \cdot \frac{960}{29}\Omega}{\frac{960}{29}\Omega + \frac{960}{29}\Omega} = \frac{480}{29}\Omega$$\\
 
-\newpage
-\subsection{Durchführung 3}
+Mit einer letzten Serieschaltung mit $R_1$ gelangen wir zum gesamten Ersatzwiderstand $R_{ges}$.
 
-$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{3_{max}}-u_{3_{min}}'\cdot C_{b_{min}}}{u_{3_{min}}'}}$\\\\
+$$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{1002}{29}\Omega = 34.55\Omega$$
 
-$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 282.5\;V-189.5\;V\cdot 4.375\cdot 10^{-6}\;F}{189.5\;V}} = 2.162\cdot 10^{-6}\; F$\\\\
+\subsection{Stromspannungen berechnen}
 
-$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{3_{min}}-u_{3_{max}}'\cdot C_{b_{max}}}{u_{3_{max}}'}}$\\\\
+\subsubsection{Gesamtstromstärke $I_{ges}$}
 
-$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 277.5\;V-194.5\;V\cdot 4.385\cdot 10^{-6}\;F}{194.5\;V}} = 1.857\cdot 10^{-6}\; F$\\\\
+\subsubsection{Teilstromstärken $I_{1\;,\;2\;,\; ...\;,\; 9}$}
 
-$\Rightarrow C_{u_3}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2009486 (\pm 152519)\cdot F = 2.01 (\pm 0.15)\;\mu F$
+%$$C_u = \frac{C_b \cdot u - u' \cdot C_b}{u'}$$
+
+%$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{1_{max}}-u_{1_{min}}'\cdot C_{b_{min}}}{u_{1_{min}}'}}$\\\\
+%
+%$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 262.5\;V-175.5\;V\cdot 4.375\cdot 10^{-6}\;F}{175.5\;V}} = 2.184\cdot 10^{-6}\;F$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{1_{min}}-u_{1_{max}}'\cdot C_{b_{max}}}{u_{1_{max}}'}}$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 257.5\;V-180.5\;V\cdot 4.385\cdot 10^{-6}\;F}{180.5\;V}} = 1.856\cdot 10^{-6}\;F$\\\\
+%
+%$\Rightarrow C_{u_1}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2020052 (\pm 163709)\cdot F = 2.02 (\pm 0.16)\; \mu F$
+%
+%\subsection{Durchführung 2}
+%
+%$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{2_{max}}-u_{2_{min}}'\cdot C_{b_{min}}}{u_{2_{min}}'}}$\\\\
+%
+%$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 302.5\;V-198.5\;V\cdot 4.375\cdot 10^{-6}\;F}{195.5\;V}} = 2.343\cdot 10^{-6}\;F$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{2_{min}}-u_{2_{max}}'\cdot C_{b_{max}}}{u_{2_{max}}'}}$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 297.5\;V-203.5\;V\cdot 4.385\cdot 10^{-6}\;F}{203.5\;V}} = 2.011\cdot 10^{-6}\; F$\\\\
+%
+%$\Rightarrow C_{u_2}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2176861 (\pm 165977)\cdot F = 2.18 (\pm 0.17)\; \mu F$
+%
+%\newpage
+%\subsection{Durchführung 3}
+%
+%$C_{u_{max}} = \displaystyle{\frac{C_{b_{max}}\cdot u_{3_{max}}-u_{3_{min}}'\cdot C_{b_{min}}}{u_{3_{min}}'}}$\\\\
+%
+%$C_{u_{max}} = \displaystyle{\frac{4.385\cdot 10^{-6}\;F\cdot 282.5\;V-189.5\;V\cdot 4.375\cdot 10^{-6}\;F}{189.5\;V}} = 2.162\cdot 10^{-6}\; F$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{C_{b_{min}}\cdot u_{3_{min}}-u_{3_{max}}'\cdot C_{b_{max}}}{u_{3_{max}}'}}$\\\\
+%
+%$C_{u_{min}} = \displaystyle{\frac{4.375\cdot 10^{-6}\;F\cdot 277.5\;V-194.5\;V\cdot 4.385\cdot 10^{-6}\;F}{194.5\;V}} = 1.857\cdot 10^{-6}\; F$\\\\
+%
+%$\Rightarrow C_{u_3}=\displaystyle{\frac{C_{u_{max}}+C_{u_{min}}}{2}} = 2009486 (\pm 152519)\cdot F = 2.01 (\pm 0.15)\;\mu F$
 
 \section{Kommentar / Diskussion}
 
