@@ -149,7 +149,16 @@ ergibt sich:
 
 
 
-\subsection{((4. Ersatzwiederstand/Gesamtspannung))}
+\subsection{Ersatzwiederstand}
+
+Die Gesamtstromstärke $I_0$, ist die Stromstärke, welche vor dem ersten Knoten herscht. \\
+Die Gesamtspannung $U_0$, ist die Spannung, welche an das Stromnetz angelegt wird. \\
+Wird das ganze Wiederstandsnetz mit einem Wiederstand ersetzt, so heisst dieser Ersatzwiederstand. 
+
+\[ R_E = \frac{U_0}{I_0} \]
+
+Der Ersatzwiederstand verändert \textit{nicht} die Gesamtstromstärke. 
+
 \section{Versuchsaufbau}
 %\begin{figure}[H]
 
@@ -160,7 +169,7 @@ ergibt sich:
 
 
 \begin{center}
-\begin{circuitikz}[scale = 2.5]
+\begin{circuitikz}[scale = 2.2]
 
     %circuit
     \draw (0,0) 
@@ -171,7 +180,8 @@ ergibt sich:
         to [R=$R_3$ (\SI{18}{\ohm})]     (2,1.5)
         to [R=$R_4$ (\SI{20}{\ohm})]     (1,1.5)
         to [short, -*] (1,2)
-        to [short, -*] (0,2)  --  (0,0);
+        to [short, -*] (0,2)        
+        to[ammeter, l=$A$] (0,0) --  (0,0);
 
     \draw (1,2)
         to [short] (1,2.5)
@@ -195,12 +205,12 @@ ergibt sich:
 
     %arrows
     \draw (3.85,2)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_1$]{};
-    \draw (3,2.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_x$]{};
-    \draw (3,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_x$]{};
+    \draw (3,2.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_3$]{};
+    \draw (3,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_4$]{};
     \draw (0.85,2)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_1$]{};
     \draw (4,2.13)node[flowarrow,color = red, rotate = 90, label = right: \color{black}$I_2$]{};
-    \draw (3,4.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_x$]{};
-    \draw (3,3.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_x$]{};
+    \draw (3,4.13)node[flowarrow,color = red, rotate = 90, label = left: \color{black}$I_5$]{};
+    \draw (3,3.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_6$]{};
     \draw (0.85,4)node[flowarrow,color = red, rotate = 180, label = \color{black}$I_2$]{};
     \draw (0,1.8)node[flowarrow,color = red, rotate = -90, label = left: \color{black}$I_0$]{};
 
@@ -215,9 +225,9 @@ ergibt sich:
 \section{Versuchsdurchführung}
 
 
-Zuerst wurde das ganze Steckbrett mit den integrierten Widerständen verkabelt nach Vorgabe und das Volt- und Ampèremeter angeschlossen. Entsprechend den herrschenden Widerständen und erwarteten maximalen Stromstärken und Spannungen mussten die Einstellungen an Volt- und Ampèremeter angepasst werden. Nach genauem Nachkontrollieren, ob das Steckbrett wirklich korrekt aufgebaut worden ist, wurde schliesslich das Netzgerät an die Schaltung angeschlossen.\\
+Zuerst wurde das ganze Steckbrett mit den integrierten Widerständen verkabelt nach Vorgabe und das Ampèremeter angeschlossen. Entsprechend den herrschenden Widerständen und erwarteten maximalen Stromstärken und Spannungen mussten die Einstellungen an Volt- und Ampèremeter angepasst werden. Nach genauem Nachkontrollieren, ob das Steckbrett wirklich korrekt aufgebaut worden ist, wurde schliesslich das Netzgerät an die Schaltung angeschlossen. \\
 
-Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Mit einer Achtung darauf, ob eine der Kabel, Messgeräte oder Wiederstände durchbrennen wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und die Spannung am Netzgerät nur konservativ erhöht, um den Fall eines durchbrennenden Widerstand vorbeugend zu minimieren.\\
+Dann wurde die Spannung am Netzgerät erhöht, sodass die Funktionalität der Widerstände sich zeigen konnte. Das Voltmeter wurde für die Messungen einzeln zu jedem Wiederstand parallelgeschalten und der angezeigte Wert wurde abgelesen. Mit einer Achtung darauf, ob eines der Kabel, Messgeräte oder Wiederstände durchbrennen, wurde das Netzgerät noch wenige Minuten angelassen. Es wurde aber auch darauf geachtet, dass sich kein Wasser in der Nähe des Versuchesaufbaues befand und die Spannung am Netzgerät nur konservativ erhöht wurde, um den Fall eines durchbrennenden Widerstands vorbeugend zu minimieren.\\
 
 Nach erfolgreichem Abschluss der Messung wurde das Netzgerät wieder abgeschalten, vom Netz getrennt und alle sonstigen am Steckbrett angeschlossenen Gerätschaften wieder entfernt und versorgt.
 
