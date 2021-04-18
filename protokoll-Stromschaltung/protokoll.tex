@@ -61,6 +61,8 @@ includeheadfoot}
 % show isbn in bibliography
 \usepackage{natbib}
 
+\usepackage{amsmath}
+
 \begin{document}
 
 \begin{titlepage}
@@ -295,6 +297,77 @@ $$R_{ges} = R_{2,3,4,5,6,7,8,9} + R_1 = \frac{480}{29}\Omega + 18\Omega = \frac{
 
 \newpage
 
+\subsection{theoretische Stromstärken}
+
+Da bei der Verzweigung von $I_1$ und $I_2$ die Wiederstände gleich sind, müssen auch die Stromstärken gleich sein. Es gilt also:
+
+\begin{equation}
+I_1 = I_2
+\end{equation}
+
+Aufgrund des symmetrischen Aufbaus muss auch gelten:
+
+\begin{equation}
+I_4=I_5
+\end{equation}
+
+\begin{equation}
+I_3=I_6
+\end{equation}
+
+Aufgrund der Knotenregel gilt auch
+
+\begin{equation}
+I_0 = I_1 + I_2
+\end{equation}
+
+\begin{equation}
+I_1 = I_3 + I_4
+\end{equation}
+
+dazu analog auch
+
+\begin{equation}
+I_2 = I_5 + I_6
+\end{equation}
+
+Anhand der Maschenregel gilt mit dem Versuch eine möglichst unkomplizierte Gleichung aufzustellen:
+
+\begin{equation}
+I_0 \cdot R_1 + I_1 \cdot R_2 + I_3 \cdot R_5 = I_0 \cdot 18 \Omega + I_1 \cdot 20 \Omega + I_3 \cdot 20\Omega = U_0
+\end{equation}
+
+\begin{equation}
+I_4 \cdot (R_3 + R_4) - I_3 \cdot R_5 = I_4 \left(20+18\right)\Omega - I_3 \cdot 20\Omega = 0
+\end{equation}
+
+Aus Gleichung (1) und (4) folgt:
+\begin{equation}
+I_0 = 2I_1
+\end{equation}
+
+Aus dem Gleichungssystem \\
+
+\begin{figure}[H]
+\centering
+$\begin{vmatrix}
+I_0 = 2I_1 \\
+I_1 = I_3 + I_4 \\
+U_0 = 18I_0 + 20I_1 + 20I_3\\
+38I_4 = 20I_3
+\end{vmatrix}$\\
+\end{figure}
+
+folgt mit $U_0 = 3.90\; V$ nach Auflösen:\\
+
+$$I_0 = 11.3\; \cdot 10^{-2}A$$
+$$I_1 = 5.65\; \cdot 10^{-2} A$$
+$$I_2 = 5.65\; \cdot 10^{-2} A$$
+$$I_3 = 3.70\; \cdot 10^{-2} A$$
+$$I_4 = 1.95\; \cdot 10^{-2} A$$
+$$I_5 = 1.95\; \cdot 10^{-2} A$$
+$$I_6 = 3.70\; \cdot 10^{-2} A$$
+
 \subsection{Stromspannungen berechnen}
 
 \subsubsection{Gesamtstromstärke $I_{ges}$}
@@ -303,27 +376,42 @@ $$I_{ges} = \frac{U_{ges}}{R_{ges}} = \frac{3.90 \pm 0.005 V}{34.55\Omega} = 0.1
 
 \subsubsection{Teilspannungen $U_{1\;,\;2\;,\; ...\;,\; 9}$}
 
-Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in $$U_{i} = R_{i}\cdot I_{ges}$$ eingesetzt werden. Für die spätere Fehlerrechnung werden die Teilspannungen aber noch in Minimal- und Maximalwerte aufgeteilt.\\
+Um die Teilspannungen zu berechnen, müssen nur noch die entsprechenden Werte in $$U = R \cdot I$$ eingesetzt werden. Für die spätere Fehlerrechnung werden die Teilspannungen aber noch in Minimal- und Maximalwerte aufgeteilt.\\
 
 \begin{table}[H]
-    \centering
-    \begin{tabular}{|c|c|c|}
+\centering
+    \begin{tabular}{|c|c|c|c|}
         \hline
-        \textbf{Teilspannung} & \textbf{Wert [V]}\\
+        \textbf{Teilspannung} & \textbf{gemessener Wert [V]} & \textbf{theoretischer Wert [V]} & \textbf{Teilstromstärke}\\
         \hline
-        $U_{2,3,4,5,6,7,8,9}$ & 1.8683\\
+        $U_1$ & 1.78 & 2.03 & $I_0$\\
         \hline
-        $U_{1}$ & 2.0317 \\
+        $U_2$ & 1.00 & 1.13 & $I_1$\\
+        \hline
+        $U_3$ & 0.31 & 0.35 & $I_4$\\
+        \hline
+        $U_4$ & 0.34 & 0.39 & $I_4$\\
+        \hline
+        $U_5$ & 0.65 & 0.74 & $I_3$\\
+        \hline
+        $U_6$ & 1.02 & 1.13 & $I_2$\\
+        \hline
+        $U_7$ & 0.63 & 0.74 & $I_6$\\
+        \hline
+        $U_8$ & 0.30 & 0.35 & $I_5$\\
+        \hline
+        $U_9$ & 0.33 & 0.39 & $I_5$\\
         \hline
     \end{tabular}
 \end{table}
 
-Abschliessend können wir die Gesamtspannung $U_{ges}$ berechnen. Diese soll dabei annährend der Netzspannung $U_Netz$ entsprechen. Mithilfe einer Fehlerrechnung können wir die Genauigkeit der Experimentdurchführung bestimmen.
+Abschliessend können wir die Gesamtspannung $U_{ges}$ berechnen. Wir vergleichen dabei das Ergebnis der Gesamtspannung welche entweder aus theoretischen oder praktischen Werten besteht.
 
-%$$U_{ges} = U_{1\;,\;2\;,\; ...\;,\; 9} != 3.90\;V$$
+$$U_{ges} = U_{1\;,\;2\;,\; ...\;,\; 9}$$
 
-$$U_{ges} = U_1 + U_{2,3,4,5,6,7,8,9} = 1.8683\; V + 2.0317\; V = 3.9\; V$$
+$$U_{theo} = 6.36\; V$$
 
+$$U_{prak} = 7.25\; V$$
 
 \section{Kommentar / Diskussion}
 
